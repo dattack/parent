@@ -78,15 +78,24 @@
     </distributionManagement>
 
     <properties>
-        <bcel.version>6.3</bcel.version>
-        <checkstyle.version>8.18</checkstyle.version>
+        <arguments></arguments>
+        <bcel.version>6.3.1</bcel.version>
+        <checkstyle.version>8.21</checkstyle.version>
+        <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
+
+        <dattack.changes.onlyCurrentVersion>false</dattack.changes.onlyCurrentVersion>
+        <dattack.changes.runOnlyAtExecutionRoot>false</dattack.changes.runOnlyAtExecutionRoot>
+
+        <dattack.clirr.minSeverity>info</dattack.clirr.minSeverity>
         <dattack.compiler.compilerVersion>1.7</dattack.compiler.compilerVersion>
         <dattack.compiler.fork>true</dattack.compiler.fork>
-        <dattack.compiler.source>1.7</dattack.compiler.source>
-        <dattack.compiler.target>1.7</dattack.compiler.target>
-        <dattack.jacoco.branchRatio>0.85</dattack.jacoco.branchRatio>
+        <dattack.compiler.javac></dattack.compiler.javac>
+        <dattack.compiler.source.version>1.7</dattack.compiler.source.version>
+        <dattack.compiler.target.version>1.7</dattack.compiler.target.version>
+        <dattack.coveralls.timestampFormat>EpochMillis</dattack.coveralls.timestampFormat>
 
         <!-- Default values for the jacoco-maven-plugin reports -->
+        <dattack.jacoco.branchRatio>0.85</dattack.jacoco.branchRatio>
         <dattack.jacoco.classRatio>1.00</dattack.jacoco.classRatio>
         <dattack.jacoco.complexityRatio>0.85</dattack.jacoco.complexityRatio>
         <dattack.jacoco.haltOnFailure>false</dattack.jacoco.haltOnFailure>
@@ -94,56 +103,58 @@
         <dattack.jacoco.lineRatio>0.90</dattack.jacoco.lineRatio>
         <dattack.jacoco.methodRatio>0.95</dattack.jacoco.methodRatio>
 
+        <implementation.build>${scmBranch}@r${buildNumber}; ${maven.build.timestamp}</implementation.build>
+
         <javadoc.java.link>http://docs.oracle.com/javase/7/docs/api/</javadoc.java.link>
         <javadoc.javaee.link>http://docs.oracle.com/javaee/6/api/</javadoc.javaee.link>
-
-        <plugin.appassembler.version>2.0.0</plugin.appassembler.version>
+        <plugin.appassembler.version>2.1.0</plugin.appassembler.version>
         <plugin.assembly.version>3.1.1</plugin.assembly.version>
         <plugin.build-helper.version>3.0.0</plugin.build-helper.version>
         <plugin.buildnumber.version>1.4</plugin.buildnumber.version>
         <plugin.changelog.version>2.3</plugin.changelog.version>
         <plugin.changes.version>2.12.1</plugin.changes.version>
-        <plugin.checkstyle.version>3.0.0</plugin.checkstyle.version>
+        <plugin.checkstyle.version>3.1.0</plugin.checkstyle.version>
         <plugin.clean.version>3.1.0</plugin.clean.version>
         <plugin.clirr.version>2.8</plugin.clirr.version>
         <plugin.cobertura.version>2.7</plugin.cobertura.version>
-        <plugin.compiler.version>3.8.0</plugin.compiler.version>
+        <plugin.compiler.version>3.8.1</plugin.compiler.version>
+        <plugin.coveralls.version>4.3.0</plugin.coveralls.version>
         <plugin.dependency.version>3.1.1</plugin.dependency.version>
         <plugin.deploy.version>3.0.0-M1</plugin.deploy.version>
         <plugin.docck.version>1.1</plugin.docck.version>
         <plugin.ear.version>3.0.1</plugin.ear.version>
         <plugin.eclipse.version>2.10</plugin.eclipse.version>
         <plugin.enforcer.version>3.0.0-M2</plugin.enforcer.version>
-        <plugin.failsafe.version>3.0.0-M1</plugin.failsafe.version>
+        <plugin.failsafe.version>3.0.0-M2</plugin.failsafe.version>
         <plugin.findbugs.version>3.0.5</plugin.findbugs.version>
         <plugin.gpg.version>1.6</plugin.gpg.version>
-        <plugin.help.version>3.1.1</plugin.help.version>
+        <plugin.help.version>3.2.0</plugin.help.version>
         <plugin.install.version>3.0.0-M1</plugin.install.version>
         <plugin.invoker.version>3.2.0</plugin.invoker.version>
-        <plugin.jacoco.version>0.8.3</plugin.jacoco.version>
-        <plugin.jar.version>3.1.0</plugin.jar.version>
-        <plugin.javadoc.version>3.0.1</plugin.javadoc.version>
+        <plugin.jacoco.version>0.8.4</plugin.jacoco.version>
+        <plugin.jar.version>3.1.2</plugin.jar.version>
+        <plugin.javadoc.version>3.1.0</plugin.javadoc.version>
         <plugin.jdepend.version>2.0</plugin.jdepend.version>
         <plugin.jxr.version>3.0.0</plugin.jxr.version>
-        <plugin.maven-scm-provider-gitexe.version>1.11.1</plugin.maven-scm-provider-gitexe.version>
+        <plugin.maven-scm-provider-gitexe.version>1.11.2</plugin.maven-scm-provider-gitexe.version>
         <plugin.nexus-staging.version>1.6.8</plugin.nexus-staging.version>
         <plugin.plugin.version>3.6.0</plugin.plugin.version>
-        <plugin.pmd.version>3.11.0</plugin.pmd.version>
+        <plugin.pmd.version>3.12.0</plugin.pmd.version>
         <plugin.project-info-reports.version>3.0.0</plugin.project-info-reports.version>
         <plugin.rat.version>0.13</plugin.rat.version>
         <plugin.release.version>2.5.3</plugin.release.version>
         <plugin.resources.version>3.1.0</plugin.resources.version>
         <plugin.scm-publish.version>3.0.0</plugin.scm-publish.version>
-        <plugin.scm.version>1.11.1</plugin.scm.version>
+        <plugin.scm.version>1.11.2</plugin.scm.version>
         <plugin.shade.version>3.2.1</plugin.shade.version>
         <plugin.site.version>3.7.1</plugin.site.version>
         <plugin.sortpom.version>2.10.0</plugin.sortpom.version>
-        <plugin.source.version>3.0.1</plugin.source.version>
-        <plugin.surefire-report.version>2.21.0</plugin.surefire-report.version>
+        <plugin.source.version>3.1.0</plugin.source.version>
+        <plugin.surefire-report.version>3.0.0-M3</plugin.surefire-report.version>
         <plugin.surefire.version>3.0.0-M3</plugin.surefire.version>
         <plugin.taglist.version>2.4</plugin.taglist.version>
         <plugin.versions.version>2.7</plugin.versions.version>
-        <plugin.war.version>3.2.2</plugin.war.version>
+        <plugin.war.version>3.2.3</plugin.war.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <url.checkstyle.file>http://code.dattack.com/parent/2/dattack-checkstyle.xml</url.checkstyle.file>
@@ -189,11 +200,9 @@
                 </includes>
             </testResource>
         </testResources>
-        <!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
-        <!-- Plugin management section                                     -->
-        <!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
         <pluginManagement>
             <plugins>
+                <!-- Other plugins, alpha order by groupId and artifactId -->
                 <plugin>
                     <groupId>com.github.ekryd.sortpom</groupId>
                     <artifactId>sortpom-maven-plugin</artifactId>
@@ -218,6 +227,14 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
                     <version>${plugin.assembly.version}</version>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                     <configuration>
                         <descriptors>
                             <descriptor>src/assembly/src.xml</descriptor>
@@ -230,6 +247,11 @@
                     <artifactId>maven-changelog-plugin</artifactId>
                     <version>${plugin.changelog.version}</version>
                     <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.scm</groupId>
+                            <artifactId>maven-scm-api</artifactId>
+                            <version>${plugin.maven-scm-provider-gitexe.version}</version>
+                        </dependency>
                         <dependency>
                             <groupId>org.apache.maven.scm</groupId>
                             <artifactId>maven-scm-provider-gitexe</artifactId>
@@ -281,8 +303,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${plugin.compiler.version}</version>
                     <configuration>
-                        <source>${dattack.compiler.source}</source>
-                        <target>${dattack.compiler.target}</target>
+                        <source>${dattack.compiler.source.version}</source>
+                        <target>${dattack.compiler.target.version}</target>
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <fork>${dattack.compiler.fork}</fork>
                         <compilerVersion>${dattack.compiler.compilerVersion}</compilerVersion>
@@ -344,23 +366,23 @@
                     <version>${plugin.enforcer.version}</version>
                     <executions>
                         <execution>
-                            <id>enforce-maven-3</id>
+                            <id>enforce-versions</id>
                             <goals>
                                 <goal>enforce</goal>
                             </goals>
+                            <configuration>
+                                <rules>
+                                    <requireMavenVersion>
+                                        <version>3.3.9</version>
+                                    </requireMavenVersion>
+                                    <requireJavaVersion>
+                                        <version>${dattack.compiler.target.version}</version>
+                                    </requireJavaVersion>
+                                </rules>
+                                <fail>true</fail>
+                            </configuration>
                         </execution>
                     </executions>
-                    <configuration>
-                        <rules>
-                            <requireMavenVersion>
-                                <version>3.3.9</version>
-                            </requireMavenVersion>
-                            <requireJavaVersion>
-                                <version>${dattack.compiler.target}</version>
-                            </requireJavaVersion>
-                        </rules>
-                        <fail>true</fail>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -398,7 +420,6 @@
                     <version>${plugin.jar.version}</version>
                     <configuration>
                         <archive>
-                            <manifestFile>${dattack.manifestfile}</manifestFile>
                             <manifestEntries>
                                 <Specification-Title>${project.name}</Specification-Title>
                                 <Specification-Version>${project.version}</Specification-Version>
@@ -408,8 +429,8 @@
                                 <Implementation-Vendor>${project.organization.name}</Implementation-Vendor>
                                 <Implementation-Vendor-Id>com.dattack</Implementation-Vendor-Id>
                                 <Implementation-Build>${implementation.build}</Implementation-Build>
-                                <X-Compile-Source-JDK>${dattack.compiler.source}</X-Compile-Source-JDK>
-                                <X-Compile-Target-JDK>${dattack.compiler.target}</X-Compile-Target-JDK>
+                                <X-Compile-Source-JDK>${dattack.compiler.source.version}</X-Compile-Source-JDK>
+                                <X-Compile-Target-JDK>${dattack.compiler.target.version}</X-Compile-Target-JDK>
                             </manifestEntries>
                         </archive>
                     </configuration>
@@ -429,7 +450,6 @@
                     <configuration>
                         <quiet>true</quiet>
                         <encoding>${project.build.sourceEncoding}</encoding>
-                        <docEncoding>${project.build.sourceEncoding}</docEncoding>
                         <failOnError>false</failOnError>
                         <notimestamp>true</notimestamp>
                         <linksource>true</linksource>
@@ -491,7 +511,7 @@
                     <configuration>
                         <useReleaseProfile>false</useReleaseProfile>
                         <goals>deploy</goals>
-                        <arguments>-Papache-release ${arguments}</arguments>
+                        <arguments>-Pdattack-release ${arguments}</arguments>
                         <waitBeforeTagging>10</waitBeforeTagging>
                     </configuration>
                 </plugin>
@@ -536,7 +556,6 @@
                     </executions>
                     <dependencies>
                         <dependency>
-                            <!-- add support for ssh/scp -->
                             <groupId>org.apache.maven.wagon</groupId>
                             <artifactId>wagon-ssh</artifactId>
                             <version>${wagon-ssh.version}</version>
@@ -572,17 +591,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${plugin.surefire.version}</version>
-                    <configuration>
-                        <jvm>${dattack.surefire.java}</jvm>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-report-plugin</artifactId>
                     <version>${plugin.surefire-report.version}</version>
-                    <configuration>
-                        <aggregate>${dattack.surefire-report.aggregate}</aggregate>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -608,7 +621,6 @@
                         </excludes>
                     </configuration>
                 </plugin>
-
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>appassembler-maven-plugin</artifactId>
@@ -643,10 +655,9 @@
                     <artifactId>clirr-maven-plugin</artifactId>
                     <version>${plugin.clirr.version}</version>
                     <configuration>
-                        <minSeverity>${minSeverity}</minSeverity>
+                        <minSeverity>${dattack.clirr.minSeverity}</minSeverity>
                     </configuration>
                 </plugin>
-
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>cobertura-maven-plugin</artifactId>
@@ -766,12 +777,7 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
-        <!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
-        <!-- Plugins section                                               -->
-        <!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
         <plugins>
-            <!-- Needed for command-line access -->
             <plugin>
                 <groupId>com.github.ekryd.sortpom</groupId>
                 <artifactId>sortpom-maven-plugin</artifactId>
@@ -785,26 +791,22 @@
                 <artifactId>buildnumber-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
-
-    <!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
-    <!-- Reporting section                                                 -->
-    <!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
     <reporting>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-changelog-plugin</artifactId>
+                <version>${plugin.changelog.version}</version>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-changes-plugin</artifactId>
+                <version>${plugin.changes.version}</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -815,22 +817,32 @@
                 </reportSets>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${plugin.checkstyle.version}</version>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${plugin.javadoc.version}</version>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
+                <version>${plugin.jxr.version}</version>
                 <configuration>
                     <aggregate>true</aggregate>
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
+                <version>${plugin.pmd.version}</version>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>${plugin.project-info-reports.version}</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -855,38 +867,49 @@
                 </reportSets>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
+                <version>${plugin.site.version}</version>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${plugin.surefire-report.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.rat</groupId>
                 <artifactId>apache-rat-plugin</artifactId>
+                <version>${plugin.rat.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>clirr-maven-plugin</artifactId>
+                <version>${plugin.clirr.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
+                <version>${plugin.cobertura.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
+                <version>${plugin.findbugs.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jdepend-maven-plugin</artifactId>
+                <version>${plugin.jdepend.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>taglist-maven-plugin</artifactId>
+                <version>${plugin.taglist.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
+                <version>${plugin.versions.version}</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -900,6 +923,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${plugin.jacoco.version}</version>
             </plugin>
         </plugins>
     </reporting>
@@ -911,7 +935,9 @@
             <build>
                 <plugins>
                     <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${plugin.gpg.version}</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -956,7 +982,7 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <source>${dattack.compiler.source}</source>
+                            <source>${dattack.compiler.source.version}</source>
                         </configuration>
                     </plugin>
                     <plugin>
@@ -977,7 +1003,7 @@
         </profile>
 
         <profile>
-            <id>release</id>
+            <id>dattack-release</id>
             <build>
                 <plugins>
                     <plugin>
@@ -998,29 +1024,36 @@
                         </configuration>
                     </plugin>
                     <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>test-jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
                         <artifactId>maven-release-plugin</artifactId>
                         <configuration>
-                            <releaseProfiles>release</releaseProfiles>
+                            <releaseProfiles>dattack-release</releaseProfiles>
                         </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-test-sources</id>
+                                <goals>
+                                    <goal>test-jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
-        </profile>
-
-        <profile>
-            <id>site-basic</id>
-            <properties>
-                <checkstyle.skip>true</checkstyle.skip>
-                <clirr.skip>true</clirr.skip>
-                <cobertura.skip>true</cobertura.skip>
-                <findbugs.skip>true</findbugs.skip>
-                <jacoco.skip>true</jacoco.skip>
-                <maven.javadoc.skip>true</maven.javadoc.skip>
-                <rat.skip>true</rat.skip>
-                <skipSurefireReport>true</skipSurefireReport>
-                <skipTests>true</skipTests>
-                <spotbugs.skip>true</spotbugs.skip>
-            </properties>
         </profile>
 
         <profile>
@@ -1068,6 +1101,108 @@
             </properties>
         </profile>
 
+        <profile>
+            <id>java-1.12</id>
+            <properties>
+                <dattack.compiler.compilerVersion>1.12</dattack.compiler.compilerVersion>
+                <dattack.compiler.javac>${JAVA_1_12_HOME}/bin/javac</dattack.compiler.javac>
+                <dattack.surefire.java>${JAVA_1_12_HOME}/bin/java</dattack.surefire.java>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>release-notes</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-changes-plugin</artifactId>
+                        <version>${plugin.changes.version}</version>
+                        <executions>
+                            <execution>
+                                <id>create-release-notes</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>announcement-generate</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <template>release-notes.vm</template>
+                            <templateDirectory>src/changes</templateDirectory>
+                            <runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
+                            <announcementDirectory>.</announcementDirectory>
+                            <announcementFile>RELEASE-NOTES.txt</announcementFile>
+                            <announceParameters>
+                                <releaseVersion>${project.version}</releaseVersion>
+                            </announceParameters>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>site-basic</id>
+            <properties>
+                <checkstyle.skip>true</checkstyle.skip>
+                <clirr.skip>true</clirr.skip>
+                <cobertura.skip>true</cobertura.skip>
+                <findbugs.skip>true</findbugs.skip>
+                <jacoco.skip>true</jacoco.skip>
+                <maven.javadoc.skip>true</maven.javadoc.skip>
+                <rat.skip>true</rat.skip>
+                <skipSurefireReport>true</skipSurefireReport>
+                <skipTests>true</skipTests>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>travis-cobertura</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>cobertura-maven-plugin</artifactId>
+                        <version>${plugin.cobertura.version}</version>
+                        <configuration>
+                            <formats>
+                                <format>xml</format>
+                            </formats>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.eluder.coveralls</groupId>
+                        <artifactId>coveralls-maven-plugin</artifactId>
+                        <version>${plugin.coveralls.version}</version>
+                        <configuration>
+                            <timestampFormat>${dattack.coveralls.timestampFormat}</timestampFormat>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>travis-jacoco</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.eluder.coveralls</groupId>
+                        <artifactId>coveralls-maven-plugin</artifactId>
+                        <version>${plugin.coveralls.version}</version>
+                        <configuration>
+                            <timestampFormat>${dattack.coveralls.timestampFormat}</timestampFormat>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>${plugin.jacoco.version}</version>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 
 </project>

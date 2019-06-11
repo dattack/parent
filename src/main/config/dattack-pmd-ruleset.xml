@@ -12,10 +12,10 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 -->
-<ruleset name="dattack" 
-    xmlns="http://pmd.sf.net/ruleset/1.0.0" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd" 
+<ruleset name="dattack"
+    xmlns="http://pmd.sf.net/ruleset/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
     xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
 
     <description>PMD rule set to check code for errors and bad habits</description>
@@ -23,7 +23,7 @@
     <rule ref="category/java/bestpractices.xml" />
 
     <!-- codestyle -->
-    <rule ref="category/java/codestyle.xml/AtLeastOneConstructor" />
+    <!-- <rule ref="category/java/codestyle.xml/AtLeastOneConstructor" /> -->
     <rule ref="category/java/codestyle.xml/AvoidDollarSigns" />
     <rule ref="category/java/codestyle.xml/AvoidFinalLocalVariable" />
     <rule ref="category/java/codestyle.xml/AvoidProtectedFieldInFinalClass" />

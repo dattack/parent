@@ -51,7 +51,8 @@ ehthumbs.db
 Thumbs.db
 
 # Maven & IDE files #
-###############
+################
+.idea
 .checkstyle
 .classpath
 .externalToolBuilders
