@@ -12,28 +12,9 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 -->
-<settings>
-  <servers>
-    <server>
-      <id>ossrh</id>
-      <username>${env.OSSRH_JIRA_USERNAME}</username>
-      <password>${env.OSSRH_JIRA_PASSWORD}</password>
-    </server>
-  </servers>
-  
-  <profiles>
-    <profile>
-      <id>ossrh</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <properties>
-        <gpg.executable>gpg</gpg.executable>
-        <gpg.keyname>${env.GPG_KEY_NAME}</gpg.keyname>
-        <gpg.passphrase>${env.GPG_PASSPHRASE}</gpg.passphrase>
-      </properties>
-
-    </profile>
-  </profiles>
-</settings>
-
+<fileset-config file-format-version="1.2.0" simple-config="true">
+    <fileset name="dattack" enabled="true" check-config-name="dattack" local="false">
+        <file-match-pattern match-pattern="." include-pattern="true"/>
+    </fileset>
+    <filter name="NonSrcDirs" enabled="true"/>
+</fileset-config>
