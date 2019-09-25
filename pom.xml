@@ -87,11 +87,11 @@
         <dattack.changes.runOnlyAtExecutionRoot>false</dattack.changes.runOnlyAtExecutionRoot>
 
         <dattack.clirr.minSeverity>info</dattack.clirr.minSeverity>
-        <dattack.compiler.compilerVersion>1.7</dattack.compiler.compilerVersion>
+        <dattack.compiler.compilerVersion>1.8</dattack.compiler.compilerVersion>
         <dattack.compiler.fork>true</dattack.compiler.fork>
         <dattack.compiler.javac></dattack.compiler.javac>
-        <dattack.compiler.source.version>1.7</dattack.compiler.source.version>
-        <dattack.compiler.target.version>1.7</dattack.compiler.target.version>
+        <dattack.compiler.source.version>1.8</dattack.compiler.source.version>
+        <dattack.compiler.target.version>1.8</dattack.compiler.target.version>
         <dattack.coveralls.timestampFormat>EpochMillis</dattack.coveralls.timestampFormat>
 
         <!-- Default values for the jacoco-maven-plugin reports -->
@@ -1054,15 +1054,6 @@
                     </plugin>
                 </plugins>
             </build>
-        </profile>
-
-        <profile>
-            <id>java-1.7</id>
-            <properties>
-                <dattack.compiler.compilerVersion>1.7</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_1_7_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_1_7_HOME}/bin/java</dattack.surefire.java>
-            </properties>
         </profile>
 
         <profile>
