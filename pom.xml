@@ -80,7 +80,7 @@
     <properties>
         <arguments></arguments>
         <bcel.version>6.3.1</bcel.version>
-        <checkstyle.version>8.21</checkstyle.version>
+        <checkstyle.version>8.29</checkstyle.version>
         <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
 
         <dattack.changes.onlyCurrentVersion>false</dattack.changes.onlyCurrentVersion>
