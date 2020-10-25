@@ -286,8 +286,6 @@
                     <configuration>
                         <configLocation>${url.checkstyle.file}</configLocation>
                         <failOnViolation>false</failOnViolation>
-                        <format>xml</format>
-                        <format>html</format>
                         <outputFile>${project.build.directory}/test/checkstyle-errors.xml</outputFile>
                     </configuration>
                 </plugin>
