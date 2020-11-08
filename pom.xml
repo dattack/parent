@@ -652,12 +652,26 @@
                     <artifactId>taglist-maven-plugin</artifactId>
                     <version>${plugin.taglist.version}</version>
                     <configuration>
-                        <tags>
-                            <tag>TODO</tag>
-                            <tag>FIXME</tag>
-                            <tag>@todo</tag>
-                            <tag>@deprecated</tag>
-                        </tags>
+                        <encoding>UTF-8</encoding>
+                        <sourceFileLocale>en</sourceFileLocale>
+                        <emptyComments>true</emptyComments>
+                        <tagListOptions>
+                            <tagClasses>
+                                <tagClass>
+                                    <displayName>Code Work</displayName>
+                                    <tags>
+                                        <tag>
+                                            <matchString>@FIXME</matchString>
+                                            <matchType>exact</matchType>
+                                        </tag>
+                                        <tag>
+                                            <matchString>@TODO</matchString>
+                                            <matchType>exact</matchType>
+                                        </tag>
+                                    </tags>
+                                </tagClass>
+                            </tagClasses>
+                        </tagListOptions>
                     </configuration>
                 </plugin>
                 <plugin>
