@@ -16,7 +16,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dattack</groupId>
     <artifactId>parent</artifactId>
-    <version>2</version>
+    <version>3</version>
     <packaging>pom</packaging>
     <name>Dattack Parent</name>
     <description>The Dattack Parent POM provides common settings for all Dattack projects.</description>
@@ -50,7 +50,7 @@
     <scm>
         <connection>scm:git:https://github.com/dattack/parent.git</connection>
         <developerConnection>scm:git:git+ssh://git@github.com/dattack/parent.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v3</tag>
         <url>https://github.com/dattack/parent/tree/${project.scm.tag}</url>
     </scm>
     <issueManagement>
@@ -79,8 +79,10 @@
 
     <properties>
         <arguments></arguments>
-        <bcel.version>6.3.1</bcel.version>
-        <checkstyle.version>8.29</checkstyle.version>
+        <bcel.version>6.5.0</bcel.version>
+
+        <checkstyle.header.file>https://dattack.com/developer/v3/java.header</checkstyle.header.file>
+        <checkstyle.version>8.38</checkstyle.version>
         <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
 
         <dattack.changes.onlyCurrentVersion>false</dattack.changes.onlyCurrentVersion>
@@ -108,61 +110,60 @@
         <javadoc.java.link>http://docs.oracle.com/javase/7/docs/api/</javadoc.java.link>
         <javadoc.javaee.link>http://docs.oracle.com/javaee/6/api/</javadoc.javaee.link>
         <plugin.appassembler.version>2.1.0</plugin.appassembler.version>
-        <plugin.assembly.version>3.1.1</plugin.assembly.version>
-        <plugin.build-helper.version>3.0.0</plugin.build-helper.version>
+        <plugin.assembly.version>3.3.0</plugin.assembly.version>
+        <plugin.build-helper.version>3.2.0</plugin.build-helper.version>
         <plugin.buildnumber.version>1.4</plugin.buildnumber.version>
         <plugin.changelog.version>2.3</plugin.changelog.version>
         <plugin.changes.version>2.12.1</plugin.changes.version>
-        <plugin.checkstyle.version>3.1.0</plugin.checkstyle.version>
+        <plugin.checkstyle.version>3.1.1</plugin.checkstyle.version>
         <plugin.clean.version>3.1.0</plugin.clean.version>
         <plugin.clirr.version>2.8</plugin.clirr.version>
-        <plugin.cobertura.version>2.7</plugin.cobertura.version>
+        <!--        <plugin.cobertura.version>2.7</plugin.cobertura.version> -->
         <plugin.compiler.version>3.8.1</plugin.compiler.version>
         <plugin.coveralls.version>4.3.0</plugin.coveralls.version>
-        <plugin.dependency.version>3.1.1</plugin.dependency.version>
+        <plugin.dependency.version>3.1.2</plugin.dependency.version>
         <plugin.deploy.version>3.0.0-M1</plugin.deploy.version>
         <plugin.docck.version>1.1</plugin.docck.version>
-        <plugin.ear.version>3.0.1</plugin.ear.version>
-        <plugin.eclipse.version>2.10</plugin.eclipse.version>
-        <plugin.enforcer.version>3.0.0-M2</plugin.enforcer.version>
-        <plugin.failsafe.version>3.0.0-M2</plugin.failsafe.version>
-        <plugin.findbugs.version>3.0.5</plugin.findbugs.version>
+        <plugin.ear.version>3.1.0</plugin.ear.version>
+        <plugin.enforcer.version>3.0.0-M3</plugin.enforcer.version>
+        <plugin.failsafe.version>3.0.0-M5</plugin.failsafe.version>
         <plugin.gpg.version>1.6</plugin.gpg.version>
         <plugin.help.version>3.2.0</plugin.help.version>
         <plugin.install.version>3.0.0-M1</plugin.install.version>
-        <plugin.invoker.version>3.2.0</plugin.invoker.version>
-        <plugin.jacoco.version>0.8.4</plugin.jacoco.version>
-        <plugin.jar.version>3.1.2</plugin.jar.version>
-        <plugin.javadoc.version>3.1.0</plugin.javadoc.version>
+        <plugin.invoker.version>3.2.1</plugin.invoker.version>
+        <plugin.jacoco.version>0.8.6</plugin.jacoco.version>
+        <plugin.jar.version>3.2.0</plugin.jar.version>
+        <plugin.javadoc.version>3.2.0</plugin.javadoc.version>
         <plugin.jdepend.version>2.0</plugin.jdepend.version>
         <plugin.jxr.version>3.0.0</plugin.jxr.version>
         <plugin.maven-scm-provider-gitexe.version>1.11.2</plugin.maven-scm-provider-gitexe.version>
         <plugin.nexus-staging.version>1.6.8</plugin.nexus-staging.version>
         <plugin.plugin.version>3.6.0</plugin.plugin.version>
-        <plugin.pmd.version>3.12.0</plugin.pmd.version>
-        <plugin.project-info-reports.version>3.0.0</plugin.project-info-reports.version>
+        <plugin.pmd.version>3.13.0</plugin.pmd.version>
+        <plugin.project-info-reports.version>3.1.1</plugin.project-info-reports.version>
         <plugin.rat.version>0.13</plugin.rat.version>
-        <plugin.release.version>2.5.3</plugin.release.version>
-        <plugin.resources.version>3.1.0</plugin.resources.version>
+        <plugin.release.version>3.0.0-M1</plugin.release.version>
+        <plugin.resources.version>3.2.0</plugin.resources.version>
         <plugin.scm-publish.version>3.0.0</plugin.scm-publish.version>
         <plugin.scm.version>1.11.2</plugin.scm.version>
-        <plugin.shade.version>3.2.1</plugin.shade.version>
-        <plugin.site.version>3.7.1</plugin.site.version>
-        <plugin.sortpom.version>2.10.0</plugin.sortpom.version>
-        <plugin.source.version>3.1.0</plugin.source.version>
-        <plugin.surefire-report.version>3.0.0-M3</plugin.surefire-report.version>
-        <plugin.surefire.version>3.0.0-M3</plugin.surefire.version>
+        <plugin.shade.version>3.2.4</plugin.shade.version>
+        <plugin.site.version>3.9.1</plugin.site.version>
+        <plugin.sortpom.version>2.12.0</plugin.sortpom.version>
+        <plugin.source.version>3.2.1</plugin.source.version>
+        <!--
+        <plugin.findbugs.version>3.0.4</plugin.findbugs.version>
+-->
+        <plugin.spotbugs.version>4.1.4</plugin.spotbugs.version>
+        <plugin.surefire-report.version>3.0.0-M5</plugin.surefire-report.version>
+        <plugin.surefire.version>3.0.0-M5</plugin.surefire.version>
         <plugin.taglist.version>2.4</plugin.taglist.version>
-        <plugin.versions.version>2.7</plugin.versions.version>
-        <plugin.war.version>3.2.3</plugin.war.version>
+        <plugin.versions.version>2.8.1</plugin.versions.version>
+        <plugin.war.version>3.3.1</plugin.war.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <url.checkstyle.file>http://code.dattack.com/parent/2/dattack-checkstyle.xml</url.checkstyle.file>
-        <url.eclipse-checkstyle.file>http://code.dattack.com/parent/2/dattack-eclipse-checkstyle.xml</url.eclipse-checkstyle.file>
-        <url.eclipse-pmd.file>http://code.dattack.com/parent/2/dattack-eclipse-pmd.xml</url.eclipse-pmd.file>
-        <url.pmd-ruleset.file>http://code.dattack.com/parent/2/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
-
-        <wagon-ssh.version>3.3.2</wagon-ssh.version>
+        <url.checkstyle.file>https://dattack.com/developer/v3/dattack-checkstyle.xml</url.checkstyle.file>
+        <url.pmd-ruleset.file>https://dattack.com/developer/v3/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
+        <wagon-ssh.version>3.4.2</wagon-ssh.version>
     </properties>
 
     <build>
@@ -222,6 +223,31 @@
                         <sortPlugins>groupId,artifactId</sortPlugins>
                         <sortDependencies>scope,groupId,artifactId</sortDependencies>
                     </configuration>
+                </plugin>
+                <!--
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>cobertura-maven-plugin</artifactId>
+                    <version>${plugin.cobertura.version}</version>
+                    <configuration>
+                        <formats>
+                            <format>xml</format>
+                            <format>html</format>
+                        </formats>
+                    </configuration>
+                </plugin>
+-->
+                <!--
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>findbugs-maven-plugin</artifactId>
+                    <version>${plugin.findbugs.version}</version>
+                </plugin>
+-->
+                <plugin>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
+                    <version>${plugin.spotbugs.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -288,8 +314,6 @@
                     <configuration>
                         <configLocation>${url.checkstyle.file}</configLocation>
                         <failOnViolation>false</failOnViolation>
-                        <format>xml</format>
-                        <format>html</format>
                         <outputFile>${project.build.directory}/test/checkstyle-errors.xml</outputFile>
                     </configuration>
                 </plugin>
@@ -330,35 +354,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-ear-plugin</artifactId>
                     <version>${plugin.ear.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-eclipse-plugin</artifactId>
-                    <version>${plugin.eclipse.version}</version>
-                    <configuration>
-                        <additionalBuildcommands>
-                            <buildcommand>com.atlassw.tools.eclipse.checkstyle.CheckstyleBuilder</buildcommand>
-                            <buildcommand>net.sourceforge.pmd.eclipse.plugin.pmdBuilder</buildcommand>
-                        </additionalBuildcommands>
-                        <additionalProjectnatures>
-                            <projectnature>com.atlassw.tools.eclipse.checkstyle.CheckstyleNature</projectnature>
-                            <projectnature>net.sourceforge.pmd.eclipse.plugin.pmdNature</projectnature>
-                        </additionalProjectnatures>
-                        <additionalConfig>
-                            <file>
-                                <name>.checkstyle</name>
-                                <location>${url.eclipse-checkstyle.file}</location>
-                            </file>
-                            <file>
-                                <name>.pmd</name>
-                                <location>${url.eclipse-pmd.file}</location>
-                            </file>
-                            <file>
-                                <name>.ruleset</name>
-                                <location>${url.pmd-ruleset.file}</location>
-                            </file>
-                        </additionalConfig>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -616,7 +611,6 @@
                             <exclude>/.git/**</exclude>
                             <exclude>src/site/resources/profile.*</exclude>
                             <exclude>profile.*</exclude>
-                            <exclude>maven-eclipse.xml</exclude>
                             <exclude>.externalToolBuilders/**</exclude>
                         </excludes>
                     </configuration>
@@ -660,22 +654,6 @@
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>cobertura-maven-plugin</artifactId>
-                    <version>${plugin.cobertura.version}</version>
-                    <configuration>
-                        <formats>
-                            <format>xml</format>
-                            <format>html</format>
-                        </formats>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>findbugs-maven-plugin</artifactId>
-                    <version>${plugin.findbugs.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
                     <artifactId>jdepend-maven-plugin</artifactId>
                     <version>${plugin.jdepend.version}</version>
                 </plugin>
@@ -684,12 +662,26 @@
                     <artifactId>taglist-maven-plugin</artifactId>
                     <version>${plugin.taglist.version}</version>
                     <configuration>
-                        <tags>
-                            <tag>TODO</tag>
-                            <tag>FIXME</tag>
-                            <tag>@todo</tag>
-                            <tag>@deprecated</tag>
-                        </tags>
+                        <encoding>UTF-8</encoding>
+                        <sourceFileLocale>en</sourceFileLocale>
+                        <emptyComments>true</emptyComments>
+                        <tagListOptions>
+                            <tagClasses>
+                                <tagClass>
+                                    <displayName>Code Work</displayName>
+                                    <tags>
+                                        <tag>
+                                            <matchString>@FIXME</matchString>
+                                            <matchType>exact</matchType>
+                                        </tag>
+                                        <tag>
+                                            <matchString>@TODO</matchString>
+                                            <matchType>exact</matchType>
+                                        </tag>
+                                    </tags>
+                                </tagClass>
+                            </tagClasses>
+                        </tagListOptions>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -798,6 +790,23 @@
     </build>
     <reporting>
         <plugins>
+            <!--
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>${plugin.cobertura.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>${plugin.findbugs.version}</version>
+            </plugin>
+-->
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>${plugin.spotbugs.version}</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-changelog-plugin</artifactId>
@@ -885,16 +894,6 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>clirr-maven-plugin</artifactId>
                 <version>${plugin.clirr.version}</version>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>cobertura-maven-plugin</artifactId>
-                <version>${plugin.cobertura.version}</version>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>${plugin.findbugs.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -1138,7 +1137,7 @@
             <properties>
                 <checkstyle.skip>true</checkstyle.skip>
                 <clirr.skip>true</clirr.skip>
-                <cobertura.skip>true</cobertura.skip>
+                <!--                <cobertura.skip>true</cobertura.skip> -->
                 <findbugs.skip>true</findbugs.skip>
                 <jacoco.skip>true</jacoco.skip>
                 <maven.javadoc.skip>true</maven.javadoc.skip>
@@ -1147,7 +1146,7 @@
                 <skipTests>true</skipTests>
             </properties>
         </profile>
-
+        <!--
         <profile>
             <id>travis-cobertura</id>
             <build>
@@ -1173,7 +1172,7 @@
                 </plugins>
             </build>
         </profile>
-
+-->
         <profile>
             <id>travis-jacoco</id>
             <build>
