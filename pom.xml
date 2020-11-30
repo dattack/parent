@@ -82,7 +82,7 @@
         <bcel.version>6.5.0</bcel.version>
 
         <checkstyle.header.file>https://dattack.com/developer/v3/java.header</checkstyle.header.file>
-        <checkstyle.version>8.36.2</checkstyle.version>
+        <checkstyle.version>8.38</checkstyle.version>
         <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
 
         <dattack.changes.onlyCurrentVersion>false</dattack.changes.onlyCurrentVersion>
@@ -127,7 +127,6 @@
         <plugin.ear.version>3.1.0</plugin.ear.version>
         <plugin.enforcer.version>3.0.0-M3</plugin.enforcer.version>
         <plugin.failsafe.version>3.0.0-M5</plugin.failsafe.version>
-        <plugin.findbugs.version>3.0.5</plugin.findbugs.version>
         <plugin.gpg.version>1.6</plugin.gpg.version>
         <plugin.help.version>3.2.0</plugin.help.version>
         <plugin.install.version>3.0.0-M1</plugin.install.version>
@@ -151,6 +150,10 @@
         <plugin.site.version>3.9.1</plugin.site.version>
         <plugin.sortpom.version>2.12.0</plugin.sortpom.version>
         <plugin.source.version>3.2.1</plugin.source.version>
+        <!--
+        <plugin.findbugs.version>3.0.4</plugin.findbugs.version>
+-->
+        <plugin.spotbugs.version>4.1.4</plugin.spotbugs.version>
         <plugin.surefire-report.version>3.0.0-M5</plugin.surefire-report.version>
         <plugin.surefire.version>3.0.0-M5</plugin.surefire.version>
         <plugin.taglist.version>2.4</plugin.taglist.version>
@@ -160,7 +163,7 @@
 
         <url.checkstyle.file>https://dattack.com/developer/v3/dattack-checkstyle.xml</url.checkstyle.file>
         <url.pmd-ruleset.file>https://dattack.com/developer/v3/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
-        <wagon-ssh.version>3.4.0</wagon-ssh.version>
+        <wagon-ssh.version>3.4.2</wagon-ssh.version>
     </properties>
 
     <build>
@@ -220,6 +223,31 @@
                         <sortPlugins>groupId,artifactId</sortPlugins>
                         <sortDependencies>scope,groupId,artifactId</sortDependencies>
                     </configuration>
+                </plugin>
+                <!--
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>cobertura-maven-plugin</artifactId>
+                    <version>${plugin.cobertura.version}</version>
+                    <configuration>
+                        <formats>
+                            <format>xml</format>
+                            <format>html</format>
+                        </formats>
+                    </configuration>
+                </plugin>
+-->
+                <!--
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>findbugs-maven-plugin</artifactId>
+                    <version>${plugin.findbugs.version}</version>
+                </plugin>
+-->
+                <plugin>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
+                    <version>${plugin.spotbugs.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -624,24 +652,6 @@
                         <minSeverity>${dattack.clirr.minSeverity}</minSeverity>
                     </configuration>
                 </plugin>
-                <!--
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>cobertura-maven-plugin</artifactId>
-                    <version>${plugin.cobertura.version}</version>
-                    <configuration>
-                        <formats>
-                            <format>xml</format>
-                            <format>html</format>
-                        </formats>
-                    </configuration>
-                </plugin>
--->
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>findbugs-maven-plugin</artifactId>
-                    <version>${plugin.findbugs.version}</version>
-                </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>jdepend-maven-plugin</artifactId>
@@ -780,6 +790,23 @@
     </build>
     <reporting>
         <plugins>
+            <!--
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>${plugin.cobertura.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>${plugin.findbugs.version}</version>
+            </plugin>
+-->
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>${plugin.spotbugs.version}</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-changelog-plugin</artifactId>
@@ -867,18 +894,6 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>clirr-maven-plugin</artifactId>
                 <version>${plugin.clirr.version}</version>
-            </plugin>
-            <!--
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>cobertura-maven-plugin</artifactId>
-                <version>${plugin.cobertura.version}</version>
-            </plugin>
--->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>${plugin.findbugs.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
