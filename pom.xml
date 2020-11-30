@@ -16,7 +16,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dattack</groupId>
     <artifactId>parent</artifactId>
-    <version>3-SNAPSHOT</version>
+    <version>3</version>
     <packaging>pom</packaging>
     <name>Dattack Parent</name>
     <description>The Dattack Parent POM provides common settings for all Dattack projects.</description>
@@ -50,7 +50,7 @@
     <scm>
         <connection>scm:git:https://github.com/dattack/parent.git</connection>
         <developerConnection>scm:git:git+ssh://git@github.com/dattack/parent.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v3</tag>
         <url>https://github.com/dattack/parent/tree/${project.scm.tag}</url>
     </scm>
     <issueManagement>
