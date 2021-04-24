@@ -37,7 +37,6 @@ script: mvn test -P !build-extras -B
 
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_ab68b6998dc1_key -iv $encrypted_ab68b6998dc1_iv -in .travis/codesigning.asc.enc -out .travis/codesigning.asc -d
-  - gpg --fast-import .travis/codesigning.asc
 
 deploy:
   - provider: script
