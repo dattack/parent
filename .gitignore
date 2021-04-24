@@ -51,11 +51,15 @@ ehthumbs.db
 Thumbs.db
 
 # Maven & IDE files #
-################
-.idea
+###############
+*.ipr
+*.iws
 .checkstyle
 .classpath
+.eclipse-pmd
 .externalToolBuilders
+.idea
+*.iml
 .pmd
 .project
 .ruleset
