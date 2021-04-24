@@ -391,9 +391,10 @@
                     <configuration>
                         <gpgArguments>
                             <arg>--digest-algo=SHA512</arg>
+                            <arg>--no-tty</arg>
                             <arg>--pinentry-mode</arg>
                             <arg>loopback</arg>
-                          </gpgArguments>
+                        </gpgArguments>
                     </configuration>
                 </plugin>
                 <plugin>
