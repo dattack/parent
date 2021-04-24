@@ -35,9 +35,9 @@ install: mvn install -P !build-extras -DskipTests=true -Dmaven.javadoc.skip=true
 
 script: mvn test -P !build-extras -B
 
-stages:
-  - name: deploy
-    if: branch in (master, develop)
+#stages:
+#  - name: deploy
+#    if: branch in (master, develop)
 
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_ab68b6998dc1_key -iv $encrypted_ab68b6998dc1_iv -in .travis/codesigning.asc.enc -out .travis/codesigning.asc -d
