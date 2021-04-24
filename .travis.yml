@@ -16,7 +16,8 @@ dist: bionic
 jdk: openjdk8
 
 cache:
-  directories: $HOME/.m2
+  directories:
+    - $HOME/.m2
 
 notifications:
   email:
@@ -37,12 +38,16 @@ script: mvn test -P !build-extras -B
 
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_ab68b6998dc1_key -iv $encrypted_ab68b6998dc1_iv -in .travis/codesigning.asc.enc -out .travis/codesigning.asc -d
+  - gpg --batch --fast-import .travis/codesigning.asc
 
 deploy:
   - provider: script
     cleanup: false
     script: "mvn deploy -P sign,build-extras --settings .travis/settings.xml"
     on:
-      branch:
-        - master
-        - develop
+      branch: master
+  - provider: script
+    cleanup: false
+    script: "mvn deploy -P sign,build-extras --settings .travis/settings.xml"
+    on:
+      branch: develop
