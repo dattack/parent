@@ -3,8 +3,11 @@
 
 name: Publish package to the Maven Central Repository and GitHub Packages
 on:
-  release:
-    types: [created]
+  workflow_dispatch:  
+  push:
+    branches:
+      - master
+      - develop
 jobs:
   publish:
     runs-on: ubuntu-latest 
