@@ -11,16 +11,19 @@
 #  limitations under the License.
 
 language: java
-jdk:
-- oraclejdk8
-dist: trusty
-sudo: false
+os: linux
+dist: focal
+jdk: oraclejdk8
+
+cache:
+  directories: $HOME/.m2
+
 notifications:
   email:
-    recipients:
-    - dev@dattack.com
+    recipients: dev@dattack.com
     on_success: always
     on_failure: always
+
 env:
   global:
   - secure: V1viIVEIn9VCZsP3XClkJeH6JFByxsZwMsVdiFTqywD3y/0poJusbpf3GgmBZK4IZ/9h1nfRYS0V7sJuAdKY4Ea2Zp5VQVIrEjfWb9laVcL9Z0Crel8FHuGgIQiMHnPm4PHQeDZraeZ/JBesNIQMSLp2puokIJwCA5kBiGXqUEHgGKrWB2Dnv7o2/4jm3YK0O9YM0rQFnjJhPfLomoGdDh4cvexX20i3ivesfZ47V8zUCx85yYHTPfB+ECUaEHDqzhPG318DYVwVucTpK5ejvoOI0i7TToXjIVXiH2ZUMk/gkkvcAhLJTjZLDUpUFjwTJJIMx6iwVDRNw7GpzJKnNdkf8rLHZ0zOh1ooY+IGpP6Fjsvr/0kG3n+My6aZLImD4nglRGdTmhyWU4rifPonys8ZzMaGejTQ7sayeVP1OJeZWYbYuwPjlw9g3sW1LQlBfx5XlhIcyv5gtTVetnQ7SD+r1YwMQmBDYuZfCDj1cnayjeEqA1kjlzHuEwuAFZU/b7OTczp6+2EGeFC9sRXMS/q5lQM3jFQnAJNsYPRTXdalI1y/E+tij4gNoz/ETZ3BljepGMrbSQlDuGqdWoNwBa8/eD1dXBeetFrhNukkVtKRghg0LkYYSq3y+26SQd0dy+Zb6wYylcoVL4gJO/6IrUCkCGBDs/YWHrMPByvMZp4=
@@ -32,10 +35,15 @@ install: mvn install -P !build-extras -DskipTests=true -Dmaven.javadoc.skip=true
 
 script: mvn test -P !build-extras -B
 
-cache:
-  directories:
-    - ~/.m2/repository
+stages:
+  - name: deploy
+    if: branch in (master, develop)
 
-after_success:
-  - ./.travis/before-deploy.sh
-  - ./.travis/deploy.sh
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_ab68b6998dc1_key -iv $encrypted_ab68b6998dc1_iv -in .travis/codesigning.asc.enc -out .travis/codesigning.asc -d
+  - gpg --fast-import .travis/codesigning.asc
+
+deploy:
+  - provider: script
+    cleanup: false
+    script: "mvn deploy -P sign,build-extras --settings .travis/settings.xml"
