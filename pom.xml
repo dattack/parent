@@ -933,6 +933,9 @@
 
         <profile>
             <id>sign</id>
+            <properties>
+                <gpg.executable>gpg2</gpg.executable>
+            </properties>
             <build>
                 <plugins>
                     <plugin>
@@ -951,6 +954,7 @@
                         <configuration>
                             <gpgArguments>
                                 <arg>--digest-algo=SHA512</arg>
+                                <arg>--no-tty</arg>
                                 <arg>--pinentry-mode</arg>
                                 <arg>loopback</arg>
                             </gpgArguments>
