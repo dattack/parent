@@ -391,7 +391,6 @@
                     <configuration>
                         <gpgArguments>
                             <arg>--digest-algo=SHA512</arg>
-                            <arg>--batch</arg>
                             <arg>--pinentry-mode</arg>
                             <arg>loopback</arg>
                           </gpgArguments>
