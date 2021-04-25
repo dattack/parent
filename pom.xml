@@ -16,7 +16,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dattack</groupId>
     <artifactId>parent</artifactId>
-    <version>3</version>
+    <version>4</version>
     <packaging>pom</packaging>
     <name>Dattack Parent</name>
     <description>The Dattack Parent POM provides common settings for all Dattack projects.</description>
@@ -82,7 +82,7 @@
         <bcel.version>6.5.0</bcel.version>
 
         <checkstyle.header.file>https://dattack.com/developer/v3/java.header</checkstyle.header.file>
-        <checkstyle.version>8.38</checkstyle.version>
+        <checkstyle.version>8.41.1</checkstyle.version>
         <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
 
         <dattack.changes.onlyCurrentVersion>false</dattack.changes.onlyCurrentVersion>
@@ -163,7 +163,7 @@
 
         <url.checkstyle.file>https://dattack.com/developer/v3/dattack-checkstyle.xml</url.checkstyle.file>
         <url.pmd-ruleset.file>https://dattack.com/developer/v3/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
-        <wagon-ssh.version>3.4.2</wagon-ssh.version>
+        <wagon-ssh.version>3.4.3</wagon-ssh.version>
     </properties>
 
     <build>
@@ -391,6 +391,8 @@
                     <configuration>
                         <gpgArguments>
                             <arg>--digest-algo=SHA512</arg>
+                            <arg>--pinentry-mode</arg>
+                            <arg>loopback</arg>
                         </gpgArguments>
                     </configuration>
                 </plugin>
@@ -931,6 +933,9 @@
 
         <profile>
             <id>sign</id>
+            <properties>
+                <gpg.executable>gpg2</gpg.executable>
+            </properties>
             <build>
                 <plugins>
                     <plugin>
@@ -946,6 +951,14 @@
                                 </goals>
                             </execution>
                         </executions>
+                        <configuration>
+                            <gpgArguments>
+                                <arg>--digest-algo=SHA512</arg>
+                                <arg>--no-tty</arg>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
