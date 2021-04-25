@@ -1,8 +1,4 @@
-[![][travis img]][travis]
-[![][license img]][license]
-
-Parent POM
-==========
+# Parent POM [![license](https://img.shields.io/:license-Apache-blue.svg?style=plastic-square)](LICENSE.md)
 
 The _parent-POM_ provides common settings for all Dattack's projects.
 
@@ -24,9 +20,6 @@ use it in a maven project is set the parent:
 License
 -------
 Code is under the [Apache Licence v2](https://www.apache.org/licenses/LICENSE-2.0.txt).
-
-[travis]:https://travis-ci.org/dattack/parent/builds
-[travis img]:https://secure.travis-ci.org/dattack/parent.svg?branch=master
 
 [license]:LICENSE
 [license img]:https://img.shields.io/:license-Apache-blue.svg?style=plastic-square
