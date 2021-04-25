@@ -82,7 +82,7 @@
         <bcel.version>6.5.0</bcel.version>
 
         <checkstyle.header.file>https://dattack.com/developer/v3/java.header</checkstyle.header.file>
-        <checkstyle.version>8.40</checkstyle.version>
+        <checkstyle.version>8.41.1</checkstyle.version>
         <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
 
         <dattack.changes.onlyCurrentVersion>false</dattack.changes.onlyCurrentVersion>
@@ -163,7 +163,7 @@
 
         <url.checkstyle.file>https://dattack.com/developer/v3/dattack-checkstyle.xml</url.checkstyle.file>
         <url.pmd-ruleset.file>https://dattack.com/developer/v3/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
-        <wagon-ssh.version>3.4.2</wagon-ssh.version>
+        <wagon-ssh.version>3.4.3</wagon-ssh.version>
     </properties>
 
     <build>
