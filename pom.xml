@@ -80,10 +80,9 @@
     <properties>
         <arguments></arguments>
         <bcel.version>6.5.0</bcel.version>
-
+        <checkstyle.header.file>${url.dattack.developer}/java.header</checkstyle.header.file>
         <checkstyle.version>8.41.1</checkstyle.version>
         <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
-
         <dattack.changes.onlyCurrentVersion>false</dattack.changes.onlyCurrentVersion>
         <dattack.changes.runOnlyAtExecutionRoot>false</dattack.changes.runOnlyAtExecutionRoot>
 
@@ -155,10 +154,8 @@
         <plugin.versions.version>2.8.1</plugin.versions.version>
         <plugin.war.version>3.3.1</plugin.war.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <url.dattack.developer>https://dattack.com/developer/v5-SNAPSHOT/</url.dattack.developer>
-        <url.checkstyle.header.file>${url.dattack.developer}/java.header</url.checkstyle.header.file>
         <url.checkstyle.file>${url.dattack.developer}/dattack-checkstyle.xml</url.checkstyle.file>
+        <url.dattack.developer>https://raw.githubusercontent.com/dattack/parent/master/developer/v5-SNAPSHOT</url.dattack.developer>
         <url.pmd-ruleset.file>${url.dattack.developer}/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
         <wagon-ssh.version>3.4.3</wagon-ssh.version>
     </properties>
@@ -898,9 +895,6 @@
 
         <profile>
             <id>sign</id>
-            <properties>
-                <gpg.executable>gpg2</gpg.executable>
-            </properties>
             <build>
                 <plugins>
                     <plugin>
@@ -927,6 +921,9 @@
                     </plugin>
                 </plugins>
             </build>
+            <properties>
+                <gpg.executable>gpg2</gpg.executable>
+            </properties>
         </profile>
 
         <profile>
