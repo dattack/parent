@@ -81,7 +81,6 @@
         <arguments></arguments>
         <bcel.version>6.5.0</bcel.version>
 
-        <checkstyle.header.file>https://dattack.com/developer/v3/java.header</checkstyle.header.file>
         <checkstyle.version>8.41.1</checkstyle.version>
         <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
 
@@ -161,8 +160,10 @@
         <plugin.war.version>3.3.1</plugin.war.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <url.checkstyle.file>https://dattack.com/developer/v3/dattack-checkstyle.xml</url.checkstyle.file>
-        <url.pmd-ruleset.file>https://dattack.com/developer/v3/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
+        <url.dattack.developer>https://dattack.com/developer/v${project.version}/</url.dattack.developer>
+        <url.checkstyle.header.file>${url.dattack.developer}/java.header</url.checkstyle.header.file>
+        <url.checkstyle.file>${url.dattack.developer}/dattack-checkstyle.xml</url.checkstyle.file>
+        <url.pmd-ruleset.file>${url.dattack.developer}/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
         <wagon-ssh.version>3.4.3</wagon-ssh.version>
     </properties>
 
