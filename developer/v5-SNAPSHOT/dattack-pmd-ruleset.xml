@@ -27,7 +27,7 @@
     <rule ref="category/java/codestyle.xml/AvoidDollarSigns" />
 
     <!--
-        [WARNING] Discontinue using Rule name category/java/codestyle.xml/AvoidFinalLocalVariable as 
+        [WARNING] Discontinue using Rule name category/java/codestyle.xml/AvoidFinalLocalVariable as
         it is scheduled for removal from PMD. PMD 7.0.0 will remove support for this Rule.
     -->
     <!-- <rule ref="category/java/codestyle.xml/AvoidFinalLocalVariable" /> -->
@@ -61,7 +61,7 @@
     <rule ref="category/java/codestyle.xml/MethodArgumentCouldBeFinal" />
     <rule ref="category/java/codestyle.xml/MethodNamingConventions" />
     <rule ref="category/java/codestyle.xml/NoPackage" />
-    <rule ref="category/java/codestyle.xml/OnlyOneReturn" />
+    <!--<rule ref="category/java/codestyle.xml/OnlyOneReturn" /> -->
     <rule ref="category/java/codestyle.xml/PackageCase" />
     <rule ref="category/java/codestyle.xml/PrematureDeclaration" />
     <rule ref="category/java/codestyle.xml/RemoteInterfaceNamingConvention" />
