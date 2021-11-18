@@ -15,7 +15,7 @@ _parent-POM_ is hosted into The Central Repository, so all you need to do to use
 <parent>
     <groupId>com.dattack</groupId>
     <artifactId>parent</artifactId>
-    <version>4</version>
+    <version>5</version>
 </parent>
 ```
 
