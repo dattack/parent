@@ -81,7 +81,7 @@
         <arguments></arguments>
         <bcel.version>6.5.0</bcel.version>
         <checkstyle.header.file>${url.dattack.developer}/java.header</checkstyle.header.file>
-        <checkstyle.version>8.43</checkstyle.version>
+        <checkstyle.version>9.1</checkstyle.version>
         <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
         <dattack.changes.onlyCurrentVersion>false</dattack.changes.onlyCurrentVersion>
         <dattack.changes.runOnlyAtExecutionRoot>false</dattack.changes.runOnlyAtExecutionRoot>
