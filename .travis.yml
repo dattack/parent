@@ -1,0 +1,45 @@
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+language: java
+jdk:
+- openjdk8
+dist: bionic
+notifications:
+  email:
+    recipients:
+    - dev@dattack.com
+    on_success: always
+    on_failure: always
+  slack:
+    secure: Ow2kNNMMefF905Z2Fy1/dZdCu5gC8xZ0bkiE3GjN5Ib3lcA3xpeerglg+3rey5N2FQLwN6/dkatzqu/pyM+MjAAtDGrbBYBNZ2n2n4/ckpnetpgTob+dKXcN7s/I/7eLnQ+eeOh1LP5ww3c6q2v1ofrTZwb5qH4Q5KjpMwuid7O01lBsX+QwOsPQdDLjLhndgzTi+uktgFoLO9uax65JrVHsqDy3orARX7/boVBtO9MuEf5BWFPI2oEOSPK2lWXx9FadezWJyHb3Iigrk10D2uVMXZh4GWuRSX7CjIp5UjU546f10WdBNPG811wHlygSEfCHaLKNQYPCzpQvXWJdfiRBJQ1ZHW5pceyZxgsFXKrxIedQrE3calVl/6bGThBF4RiqQ+Ar7R8N5JOV3T0qVMZ2crg7HJOphxAuS1t18ZzLX9XFQHugmrq2nJeKB3EwqFfgDS8eyRmGM1xJIz7b+pnzspSvhR7e5BCLxOYf7rKq8kDDxWwd7kcbfHTz6j/jvuj8zQoXrQnUbbC9IkGefg11vVdFQhYiMeaZSYF1hleDoR/7P7N9I/Q0DldIDC/2EBywTeTj4cVreFKp9Hydgk90gAtHHp0tetKN4SRNl1SsovZxz0NZnwxc/YtbDuNOmsKxsJ7kFuqXZLnS7JTkH5K7Ra4C1BkS5/ddoBtt2PE=
+cache:
+  directories:
+  - "~/.m2/repository"
+env:
+  global:
+  - secure: f5kF0dEeyathMU7RurDPTluzZV/i/TkIHOAyWpeu2GYKFiSVtUDNtGaZT6PCztOLOfoJXnsQdakebOTZnJVSrZYIpTLMa6ycPJwFMZbT3Cx4a2gqSKN7dgW8vq9C+uqNNzN1E5T4TqhMN0ddJm10fJbQuDF4rzvOOANOLr0tx+6G52fyh6Kl0YhUscIt+dm4pi1/wIac8gcv5G4qb6mgT5PlEE8PIf6TLuoJTa9qtC5R2d0spc1siy2DaW+6DGe/pqNbqEegkyrWoZAnWLSWRcr64IHGD4iwmdmX1gmXigmc3HuZnKMSi5SlZNXIIR354kHqbr+qvZ9P0GM7Rsyr5S4cc2WddavBSqXtCoOqmuWY9TWCDuJi1lPXI0wDWlD1z5E+kFVTeWzAp1KYzuADywDePaLqPAw4U7YmHE71eFpQDyjhCGeBNtPyBYblUi8gkTUuM2OX45Oob2ID1w+2xsbvQ1QROrLIotIgMUvqpyrypnIEoLdw/XmTLhYrNfaxkf0m+w5GYsIipv8UAgpVjsLu4udLvxmypg5yPR00AXyOmET1TK+E/fjLYm/pryQW5n+FiPTAeCPBa4f2O6VZ5wb3MbesZaWFayFm34wqXO3mpBE146m/M+i20ZMt3FBBMxEM275JQN4bOaGYLkhtYwKNCldHvWBLT8NIkMQnSm0=
+  - secure: tUVtlNUrNsLWihX0TjWcBdui7+F39g/cJIbwxFCZDiCqObslK4mqfMfDLn6lPbGDQung4uCNRmtV77VjNpR+rJHXI+DcNbiKxSAIH3X9J008WoQjFy7FMBqDEzGuslwbbcrxdjRDu97KrrwM2c5zHPHaC3A6GP7U+uhoaSU9sVUGcsafzKVKbjZuSubvdZH4hhyeQCmCbox4PH1jEwtzFxIoTy+PPmHBTf6W3C/bHsmHHy/n5MYEnmPnUE3dO+HHCwnrYZP0tDRiVA6zKqI8IQ368o2F/YWDJb8DERL4EuAzP6YPcHscXyHUicBqm2HMwzXctjgiycSKELiLqc1wEGnf2IDsDlD/5zdSx0xVzJOEbObaZYF2B4Taf8TaPyYYHKQVAlr94gZEx+ETL4Qr9/rTwcyAnhqGsaDC3PPMj9ms344UbShsy5YxrQDpbL1BUcEod1exg02rT7Uay5PuF9DoQxRfUW4lpuTPEQllja+FWvURQlXMJNBC+SLu7dH7jHbU5fX3FdDj2tGYswfDuNbZMN4gk6iFvjrQmuepbEGYrSh/AkO+tOjIRjYiIBZ0Ymn8u6ae0cTkA90q8vNSYcnQWdHQrpcD/6AqVNJMqMvH8w/4qBvz5XLa5XC9gcTuIOdW+SoNW9RUTvVEeXOu6E+/klItQIJ+NbGKNYkgg70=
+  - secure: Aa6grfE4k52GWE0w+s6AWYleoEo9scUQ4XPecAzz7Ild5HTxJgIbAsHON8PgrTyY6ApP71gradZNgcPlKLc48vKrf3RaSL+pvUq2T0GgkVU/j0kdkfElBsi3DGEtu5IQoaQnRDs0jZT6li9WJQj32vsTV/g2UggboZVzGyUsXo7BpNrPez2kPVTiIwP+sDRqxbhyFa4PovvZK5/o8kCCXU7No0oWZgtNL77RKNx2F+5UIbnvzv49XPugqp/iwly5ECPYrZeDYyfOh0sGADbS/Z8FyQPdl6qdxiGAPa7b89OKOm+jEjW2N5vGAKNawaGDEYPB+SBb7jybqQXbzXeNg4KT6BmJ7+PMAF8QDtD8FP5aNTHVTKyGHzO5ikwbpwduD9AqprPATZuwUX8r7TeqXzqIHDjK3gUDeueTUWZKrYLjkG/srOlqY/vfiJZ6qDUOVTBWqTzkDguSO7RhxriCNWhX4TwP0Ren95secZY2lFb19U+855by6tcRBi/x4KjUBOjkAInMaV64kOnMyyWtRitYsBq/Uh9R61uliLJ2MnqWt4F22p0ek6PkuB5uVDekIj/oiSeTIqo6gEU7y1x9oBPx2IrX0TR8Qq8uIteqdhxJh7ZDsIiNjTSdRRHblOcNj+VT7QmxSfF0erV5nJMstLp2yujj4T1ec8chtzp2BzY=
+  - secure: GAWQOcJNLuV3Nag94lnK4nt8gbBMbsL/Zii4kyuHXhpno30HQw/nrfyfOeuA8qEs/jLFszGsImAXVexbn+5dQ5cJbmQxgcC494co08tjNRnpiyB/XGW0Mpj6p5u1BbodQON+fpyifZqcBuHvWL6U9TDzLM2YsMDU+iMmQlCMMhgGqn7Qwyd9mxsu7DMvyEGWjQZymOnQSwG/3qiW20uDXBc+7eUCKmfN9hg4b7zHUWY66op+ostwZ74u4mblB6vacINTET0MOQ3Qu+ZND0Urh6z++b29R7opW5psBoRM/uiIbFbtpJsiG/2TgwE6tZmB/7nivxinsX9hB/OkAx9sCQwOrjc9bIbJphoTyPqlLVjObLJ2ueQOQnbsv5ZWM0dC9ZnHXeYYoYoTI1RtKbg3YlwBdIZh/F9V3vg3492mAkp24HsN7An19VhXCXy/zhpDbUoWSvuEYP8BwmF+vnN9xUA2xNzHqM5OXUqUFWx8NgCggsjYXkePoK2Fvkw2QHi6ZeaZbjP3EVsAUEnuKqmEtyxXQCLGBtP4r8KM3uqBg6vI27CkN68CJPNMg2FByTYz3YSTirn3zSsIf1kDdGOxHbe8wacnTAo6WOpS+s8/XQoDEKCwKcd17FD+ULHq+6FSRd6PySXXOGUP4YAs+zoekoTDFM/K4O1qVYbd7agl0LQ=
+install: mvn -P !build-extras install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+script: mvn -P !build-extras test -B
+before_install:
+- openssl aes-256-cbc -K $encrypted_711e5bbf5b76_key -iv $encrypted_711e5bbf5b76_iv
+  -in .travis/codesigning.asc.enc -out .travis/codesigning.asc -d
+- gpg --batch --fast-import .travis/codesigning.asc
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: mvn -P sign,build-extras -s .travis/settings.xml deploy -DskipTests
+  on:
+    all_branches: true
+    condition: "$TRAVIS_BRANCH =~ ^(master|develop)$"
