@@ -59,7 +59,7 @@
     </issueManagement>
     <ciManagement>
         <system>Travis CI</system>
-        <url>https://travis-ci.org/dattack/parent</url>
+        <url>https://app.travis-ci.com/github/dattack/parent</url>
     </ciManagement>
 
     <distributionManagement>
