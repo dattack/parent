@@ -50,8 +50,8 @@
     <scm>
         <connection>scm:git:https://github.com/dattack/parent.git</connection>
         <developerConnection>scm:git:git+ssh://git@github.com/dattack/parent.git</developerConnection>
-        <tag>v3</tag>
-        <url>https://github.com/dattack/parent/tree/${project.scm.tag}</url>
+        <tag>HEAD</tag>
+        <url>https://github.com/dattack/parent/tree/HEAD</url>
     </scm>
     <issueManagement>
         <system>GitHub</system>
