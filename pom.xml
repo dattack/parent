@@ -16,7 +16,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dattack</groupId>
     <artifactId>parent</artifactId>
-    <version>5</version>
+    <version>6</version>
     <packaging>pom</packaging>
     <name>Dattack Parent</name>
     <description>The Dattack Parent POM provides common settings for all Dattack projects.</description>
@@ -50,8 +50,8 @@
     <scm>
         <connection>scm:git:https://github.com/dattack/parent.git</connection>
         <developerConnection>scm:git:git+ssh://git@github.com/dattack/parent.git</developerConnection>
-        <tag>v3</tag>
-        <url>https://github.com/dattack/parent/tree/${project.scm.tag}</url>
+        <tag>HEAD</tag>
+        <url>https://github.com/dattack/parent/tree/HEAD</url>
     </scm>
     <issueManagement>
         <system>GitHub</system>
@@ -59,7 +59,7 @@
     </issueManagement>
     <ciManagement>
         <system>Travis CI</system>
-        <url>https://travis-ci.org/dattack/parent</url>
+        <url>https://app.travis-ci.com/github/dattack/parent</url>
     </ciManagement>
 
     <distributionManagement>
@@ -155,7 +155,7 @@
         <plugin.war.version>3.3.1</plugin.war.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <url.checkstyle.file>${url.dattack.developer}/dattack-checkstyle.xml</url.checkstyle.file>
-        <url.dattack.developer>https://raw.githubusercontent.com/dattack/parent/develop/developer/v${project.version}</url.dattack.developer>
+        <url.dattack.developer>https://raw.githubusercontent.com/dattack/parent/develop/developer/v6</url.dattack.developer>
         <url.pmd-ruleset.file>${url.dattack.developer}/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
         <wagon-ssh.version>3.4.3</wagon-ssh.version>
     </properties>
