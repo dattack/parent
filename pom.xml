@@ -142,7 +142,7 @@
         <plugin.rat.version>0.13</plugin.rat.version>
         <plugin.release.version>3.0.0-M4</plugin.release.version>
         <plugin.resources.version>3.2.0</plugin.resources.version>
-        <plugin.scm-publish.version>3.0.0</plugin.scm-publish.version>
+        <plugin.scm-publish.version>3.1.0</plugin.scm-publish.version>
         <plugin.scm.version>1.11.2</plugin.scm.version>
         <plugin.shade.version>3.2.4</plugin.shade.version>
         <plugin.site.version>3.9.1</plugin.site.version>
