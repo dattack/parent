@@ -78,7 +78,7 @@
     </distributionManagement>
 
     <properties>
-        <arguments></arguments>
+        <arguments/>
         <bcel.version>6.5.0</bcel.version>
         <checkstyle.header.file>${url.dattack.developer}/java.header</checkstyle.header.file>
         <checkstyle.version>9.3</checkstyle.version>
@@ -89,7 +89,7 @@
         <dattack.clirr.minSeverity>info</dattack.clirr.minSeverity>
         <dattack.compiler.compilerVersion>1.8</dattack.compiler.compilerVersion>
         <dattack.compiler.fork>true</dattack.compiler.fork>
-        <dattack.compiler.javac></dattack.compiler.javac>
+        <dattack.compiler.javac/>
         <dattack.compiler.source.version>1.8</dattack.compiler.source.version>
         <dattack.compiler.target.version>1.8</dattack.compiler.target.version>
         <dattack.coveralls.timestampFormat>EpochMillis</dattack.coveralls.timestampFormat>
@@ -994,9 +994,6 @@
                     </plugin>
                     <plugin>
                         <artifactId>maven-install-plugin</artifactId>
-                        <configuration>
-                            <createChecksum>true</createChecksum>
-                        </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
