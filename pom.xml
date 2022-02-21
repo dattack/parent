@@ -110,7 +110,7 @@
         <plugin.appassembler.version>2.1.0</plugin.appassembler.version>
         <plugin.assembly.version>3.3.0</plugin.assembly.version>
         <plugin.build-helper.version>3.2.0</plugin.build-helper.version>
-        <plugin.buildnumber.version>1.4</plugin.buildnumber.version>
+        <plugin.buildnumber.version>3.0.0</plugin.buildnumber.version>
         <plugin.changelog.version>2.3</plugin.changelog.version>
         <plugin.changes.version>2.12.1</plugin.changes.version>
         <plugin.checkstyle.version>3.1.2</plugin.checkstyle.version>
