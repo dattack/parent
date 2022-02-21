@@ -138,7 +138,7 @@
         <plugin.nexus-staging.version>1.6.8</plugin.nexus-staging.version>
         <plugin.plugin.version>3.6.2</plugin.plugin.version>
         <plugin.pmd.version>3.15.0</plugin.pmd.version>
-        <plugin.project-info-reports.version>3.1.1</plugin.project-info-reports.version>
+        <plugin.project-info-reports.version>3.1.2</plugin.project-info-reports.version>
         <plugin.rat.version>0.13</plugin.rat.version>
         <plugin.release.version>3.0.0-M1</plugin.release.version>
         <plugin.resources.version>3.2.0</plugin.resources.version>
