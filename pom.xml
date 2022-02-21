@@ -155,7 +155,7 @@
         <plugin.war.version>3.3.1</plugin.war.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <url.checkstyle.file>${url.dattack.developer}/dattack-checkstyle.xml</url.checkstyle.file>
-        <url.dattack.developer>https://raw.githubusercontent.com/dattack/parent/develop/developer/v6</url.dattack.developer>
+        <url.dattack.developer>https://raw.githubusercontent.com/dattack/parent/develop/developer/v7</url.dattack.developer>
         <url.pmd-ruleset.file>${url.dattack.developer}/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
         <wagon-ssh.version>3.4.3</wagon-ssh.version>
     </properties>
