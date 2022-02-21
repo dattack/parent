@@ -124,7 +124,7 @@
         <plugin.ear.version>3.2.0</plugin.ear.version>
         <plugin.enforcer.version>3.0.0</plugin.enforcer.version>
         <plugin.failsafe.version>3.0.0-M5</plugin.failsafe.version>
-        <plugin.gpg.version>1.6</plugin.gpg.version>
+        <plugin.gpg.version>3.0.1</plugin.gpg.version>
         <plugin.help.version>3.2.0</plugin.help.version>
         <plugin.install.version>3.0.0-M1</plugin.install.version>
         <plugin.invoker.version>3.2.1</plugin.invoker.version>
