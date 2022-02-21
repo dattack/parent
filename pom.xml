@@ -133,6 +133,7 @@
         <plugin.javadoc.version>3.2.0</plugin.javadoc.version>
         <plugin.jdepend.version>2.0</plugin.jdepend.version>
         <plugin.jxr.version>3.0.0</plugin.jxr.version>
+        <plugin.maven-scm-api.version>1.12.2</plugin.maven-scm-api.version>
         <plugin.maven-scm-provider-gitexe.version>1.11.2</plugin.maven-scm-provider-gitexe.version>
         <plugin.nexus-staging.version>1.6.8</plugin.nexus-staging.version>
         <plugin.plugin.version>3.6.0</plugin.plugin.version>
@@ -250,7 +251,7 @@
                         <dependency>
                             <groupId>org.apache.maven.scm</groupId>
                             <artifactId>maven-scm-api</artifactId>
-                            <version>${plugin.maven-scm-provider-gitexe.version}</version>
+                            <version>${plugin.maven-scm-api.version}</version>
                         </dependency>
                         <dependency>
                             <groupId>org.apache.maven.scm</groupId>
