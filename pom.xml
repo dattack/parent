@@ -121,7 +121,7 @@
         <plugin.dependency.version>3.2.0</plugin.dependency.version>
         <plugin.deploy.version>3.0.0-M1</plugin.deploy.version>
         <plugin.docck.version>1.1</plugin.docck.version>
-        <plugin.ear.version>3.1.0</plugin.ear.version>
+        <plugin.ear.version>3.2.0</plugin.ear.version>
         <plugin.enforcer.version>3.0.0-M3</plugin.enforcer.version>
         <plugin.failsafe.version>3.0.0-M5</plugin.failsafe.version>
         <plugin.gpg.version>1.6</plugin.gpg.version>
