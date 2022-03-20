@@ -134,7 +134,7 @@
         <plugin.jdepend.version>2.0</plugin.jdepend.version>
         <plugin.jxr.version>3.1.1</plugin.jxr.version>
         <plugin.maven-scm-api.version>1.12.2</plugin.maven-scm-api.version>
-        <plugin.maven-scm-provider-gitexe.version>1.11.2</plugin.maven-scm-provider-gitexe.version>
+        <plugin.maven-scm-provider-gitexe.version>1.12.2</plugin.maven-scm-provider-gitexe.version>
         <plugin.nexus-staging.version>1.6.8</plugin.nexus-staging.version>
         <plugin.plugin.version>3.6.2</plugin.plugin.version>
         <plugin.pmd.version>3.15.0</plugin.pmd.version>
