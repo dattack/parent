@@ -78,7 +78,7 @@
     </distributionManagement>
 
     <properties>
-        <arguments/>
+        <arguments></arguments>
         <bcel.version>6.5.0</bcel.version>
         <checkstyle.header.file>${url.dattack.developer}/java.header</checkstyle.header.file>
         <checkstyle.version>9.3</checkstyle.version>
@@ -89,7 +89,7 @@
         <dattack.clirr.minSeverity>info</dattack.clirr.minSeverity>
         <dattack.compiler.compilerVersion>1.8</dattack.compiler.compilerVersion>
         <dattack.compiler.fork>true</dattack.compiler.fork>
-        <dattack.compiler.javac/>
+        <dattack.compiler.javac></dattack.compiler.javac>
         <dattack.compiler.source.version>1.8</dattack.compiler.source.version>
         <dattack.compiler.target.version>1.8</dattack.compiler.target.version>
         <dattack.coveralls.timestampFormat>EpochMillis</dattack.coveralls.timestampFormat>
@@ -103,7 +103,7 @@
         <dattack.jacoco.lineRatio>0.90</dattack.jacoco.lineRatio>
         <dattack.jacoco.methodRatio>0.95</dattack.jacoco.methodRatio>
 
-        <implementation.build>${scmBranch}@r${buildNumber}; ${maven.build.timestamp}</implementation.build>
+        <implementation.build>r${buildNumber}; ${maven.build.timestamp}</implementation.build>
 
         <javadoc.java.link>http://docs.oracle.com/javase/7/docs/api/</javadoc.java.link>
         <javadoc.javaee.link>http://docs.oracle.com/javaee/6/api/</javadoc.javaee.link>
@@ -441,9 +441,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jxr-plugin</artifactId>
                     <version>${plugin.jxr.version}</version>
-                    <configuration>
-                        <aggregate>true</aggregate>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -804,9 +801,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
                 <version>${plugin.jxr.version}</version>
-                <configuration>
-                    <aggregate>true</aggregate>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
