@@ -16,7 +16,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dattack</groupId>
     <artifactId>parent</artifactId>
-    <version>6</version>
+    <version>7</version>
     <packaging>pom</packaging>
     <name>Dattack Parent</name>
     <description>The Dattack Parent POM provides common settings for all Dattack projects.</description>
@@ -81,7 +81,7 @@
         <arguments></arguments>
         <bcel.version>6.5.0</bcel.version>
         <checkstyle.header.file>${url.dattack.developer}/java.header</checkstyle.header.file>
-        <checkstyle.version>9.1</checkstyle.version>
+        <checkstyle.version>9.3</checkstyle.version>
         <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
         <dattack.changes.onlyCurrentVersion>false</dattack.changes.onlyCurrentVersion>
         <dattack.changes.runOnlyAtExecutionRoot>false</dattack.changes.runOnlyAtExecutionRoot>
@@ -103,46 +103,47 @@
         <dattack.jacoco.lineRatio>0.90</dattack.jacoco.lineRatio>
         <dattack.jacoco.methodRatio>0.95</dattack.jacoco.methodRatio>
 
-        <implementation.build>${scmBranch}@r${buildNumber}; ${maven.build.timestamp}</implementation.build>
+        <implementation.build>r${buildNumber}; ${maven.build.timestamp}</implementation.build>
 
         <javadoc.java.link>http://docs.oracle.com/javase/7/docs/api/</javadoc.java.link>
         <javadoc.javaee.link>http://docs.oracle.com/javaee/6/api/</javadoc.javaee.link>
         <plugin.appassembler.version>2.1.0</plugin.appassembler.version>
         <plugin.assembly.version>3.3.0</plugin.assembly.version>
         <plugin.build-helper.version>3.2.0</plugin.build-helper.version>
-        <plugin.buildnumber.version>1.4</plugin.buildnumber.version>
+        <plugin.buildnumber.version>3.0.0</plugin.buildnumber.version>
         <plugin.changelog.version>2.3</plugin.changelog.version>
         <plugin.changes.version>2.12.1</plugin.changes.version>
-        <plugin.checkstyle.version>3.1.1</plugin.checkstyle.version>
+        <plugin.checkstyle.version>3.1.2</plugin.checkstyle.version>
         <plugin.clean.version>3.1.0</plugin.clean.version>
         <plugin.clirr.version>2.8</plugin.clirr.version>
         <plugin.compiler.version>3.8.1</plugin.compiler.version>
         <plugin.coveralls.version>4.3.0</plugin.coveralls.version>
-        <plugin.dependency.version>3.1.2</plugin.dependency.version>
+        <plugin.dependency.version>3.2.0</plugin.dependency.version>
         <plugin.deploy.version>3.0.0-M1</plugin.deploy.version>
         <plugin.docck.version>1.1</plugin.docck.version>
-        <plugin.ear.version>3.1.0</plugin.ear.version>
-        <plugin.enforcer.version>3.0.0-M3</plugin.enforcer.version>
+        <plugin.ear.version>3.2.0</plugin.ear.version>
+        <plugin.enforcer.version>3.0.0</plugin.enforcer.version>
         <plugin.failsafe.version>3.0.0-M5</plugin.failsafe.version>
-        <plugin.gpg.version>1.6</plugin.gpg.version>
+        <plugin.gpg.version>3.0.1</plugin.gpg.version>
         <plugin.help.version>3.2.0</plugin.help.version>
         <plugin.install.version>3.0.0-M1</plugin.install.version>
-        <plugin.invoker.version>3.2.1</plugin.invoker.version>
-        <plugin.jacoco.version>0.8.6</plugin.jacoco.version>
+        <plugin.invoker.version>3.2.2</plugin.invoker.version>
+        <plugin.jacoco.version>0.8.7</plugin.jacoco.version>
         <plugin.jar.version>3.2.0</plugin.jar.version>
-        <plugin.javadoc.version>3.2.0</plugin.javadoc.version>
+        <plugin.javadoc.version>3.3.1</plugin.javadoc.version>
         <plugin.jdepend.version>2.0</plugin.jdepend.version>
-        <plugin.jxr.version>3.0.0</plugin.jxr.version>
-        <plugin.maven-scm-provider-gitexe.version>1.11.2</plugin.maven-scm-provider-gitexe.version>
+        <plugin.jxr.version>3.1.1</plugin.jxr.version>
+        <plugin.maven-scm-api.version>1.12.2</plugin.maven-scm-api.version>
+        <plugin.maven-scm-provider-gitexe.version>1.12.2</plugin.maven-scm-provider-gitexe.version>
         <plugin.nexus-staging.version>1.6.8</plugin.nexus-staging.version>
-        <plugin.plugin.version>3.6.0</plugin.plugin.version>
-        <plugin.pmd.version>3.14.0</plugin.pmd.version>
-        <plugin.project-info-reports.version>3.1.1</plugin.project-info-reports.version>
+        <plugin.plugin.version>3.6.2</plugin.plugin.version>
+        <plugin.pmd.version>3.15.0</plugin.pmd.version>
+        <plugin.project-info-reports.version>3.1.2</plugin.project-info-reports.version>
         <plugin.rat.version>0.13</plugin.rat.version>
-        <plugin.release.version>3.0.0-M1</plugin.release.version>
+        <plugin.release.version>3.0.0-M4</plugin.release.version>
         <plugin.resources.version>3.2.0</plugin.resources.version>
-        <plugin.scm-publish.version>3.0.0</plugin.scm-publish.version>
-        <plugin.scm.version>1.11.2</plugin.scm.version>
+        <plugin.scm-publish.version>3.1.0</plugin.scm-publish.version>
+        <plugin.scm.version>1.12.0</plugin.scm.version>
         <plugin.shade.version>3.2.4</plugin.shade.version>
         <plugin.site.version>3.9.1</plugin.site.version>
         <plugin.sortpom.version>2.12.0</plugin.sortpom.version>
@@ -152,12 +153,12 @@
         <plugin.surefire.version>3.0.0-M5</plugin.surefire.version>
         <plugin.taglist.version>2.4</plugin.taglist.version>
         <plugin.versions.version>2.8.1</plugin.versions.version>
-        <plugin.war.version>3.3.1</plugin.war.version>
+        <plugin.war.version>3.3.2</plugin.war.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <url.checkstyle.file>${url.dattack.developer}/dattack-checkstyle.xml</url.checkstyle.file>
-        <url.dattack.developer>https://raw.githubusercontent.com/dattack/parent/develop/developer/v6</url.dattack.developer>
+        <url.dattack.developer>https://raw.githubusercontent.com/dattack/parent/develop/developer/v7</url.dattack.developer>
         <url.pmd-ruleset.file>${url.dattack.developer}/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
-        <wagon-ssh.version>3.4.3</wagon-ssh.version>
+        <wagon-ssh.version>3.5.1</wagon-ssh.version>
     </properties>
 
     <build>
@@ -250,7 +251,7 @@
                         <dependency>
                             <groupId>org.apache.maven.scm</groupId>
                             <artifactId>maven-scm-api</artifactId>
-                            <version>${plugin.maven-scm-provider-gitexe.version}</version>
+                            <version>${plugin.maven-scm-api.version}</version>
                         </dependency>
                         <dependency>
                             <groupId>org.apache.maven.scm</groupId>
@@ -440,9 +441,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jxr-plugin</artifactId>
                     <version>${plugin.jxr.version}</version>
-                    <configuration>
-                        <aggregate>true</aggregate>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -803,9 +801,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
                 <version>${plugin.jxr.version}</version>
-                <configuration>
-                    <aggregate>true</aggregate>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -993,9 +988,6 @@
                     </plugin>
                     <plugin>
                         <artifactId>maven-install-plugin</artifactId>
-                        <configuration>
-                            <createChecksum>true</createChecksum>
-                        </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
