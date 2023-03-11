@@ -1026,26 +1026,8 @@
             <id>java-1.8</id>
             <properties>
                 <dattack.compiler.compilerVersion>1.8</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_1_8_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_1_8_HOME}/bin/java</dattack.surefire.java>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>java-1.9</id>
-            <properties>
-                <dattack.compiler.compilerVersion>1.9</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_1_9_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_1_9_HOME}/bin/java</dattack.surefire.java>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>java-1.10</id>
-            <properties>
-                <dattack.compiler.compilerVersion>1.10</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_1_10_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_1_10_HOME}/bin/java</dattack.surefire.java>
+                <dattack.compiler.javac>${JAVA_8_HOME}/bin/javac</dattack.compiler.javac>
+                <dattack.surefire.java>${JAVA_8_HOME}/bin/java</dattack.surefire.java>
             </properties>
         </profile>
 
@@ -1053,17 +1035,26 @@
             <id>java-1.11</id>
             <properties>
                 <dattack.compiler.compilerVersion>1.11</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_1_11_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_1_11_HOME}/bin/java</dattack.surefire.java>
+                <dattack.compiler.javac>${JAVA_11_HOME}/bin/javac</dattack.compiler.javac>
+                <dattack.surefire.java>${JAVA_11_HOME}/bin/java</dattack.surefire.java>
             </properties>
         </profile>
 
         <profile>
-            <id>java-1.12</id>
+            <id>java-17</id>
             <properties>
-                <dattack.compiler.compilerVersion>1.12</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_1_12_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_1_12_HOME}/bin/java</dattack.surefire.java>
+                <dattack.compiler.compilerVersion>17</dattack.compiler.compilerVersion>
+                <dattack.compiler.javac>${JAVA_17_HOME}/bin/javac</dattack.compiler.javac>
+                <dattack.surefire.java>${JAVA_17_HOME}/bin/java</dattack.surefire.java>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>java-19</id>
+            <properties>
+                <dattack.compiler.compilerVersion>19</dattack.compiler.compilerVersion>
+                <dattack.compiler.javac>${JAVA_19_HOME}/bin/javac</dattack.compiler.javac>
+                <dattack.surefire.java>${JAVA_19_HOME}/bin/java</dattack.surefire.java>
             </properties>
         </profile>
 
