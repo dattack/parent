@@ -79,7 +79,7 @@
 
     <properties>
         <arguments></arguments>
-        <bcel.version>6.5.0</bcel.version>
+        <bcel.version>6.6.0</bcel.version>
         <checkstyle.header.file>${url.dattack.developer}/java.header</checkstyle.header.file>
         <checkstyle.version>9.3</checkstyle.version>
         <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
