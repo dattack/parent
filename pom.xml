@@ -782,7 +782,6 @@
                     <reportSet>
                         <reports>
                             <report>changes-report</report>
-                            <report>github-report</report>
                         </reports>
                     </reportSet>
                 </reportSets>
