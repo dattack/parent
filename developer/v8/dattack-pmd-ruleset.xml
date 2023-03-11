@@ -164,9 +164,17 @@
     <rule ref="category/java/design.xml/DataClass" />
     <rule ref="category/java/design.xml/DoNotExtendJavaLangError" />
     <rule ref="category/java/design.xml/ExceptionAsFlowControl" />
+<!--
+    Note: This rule is deprecated since PMD 6.53.0 and will be removed with PMD 7.0.0
+    In order to find "big" classes, the rule NcssCount can be used instead.
     <rule ref="category/java/design.xml/ExcessiveClassLength" />
+-->
     <rule ref="category/java/design.xml/ExcessiveImports" />
+<!--
+    Note: This rule is deprecated since PMD 6.53.0 and will be removed with PMD 7.0.0.
+    In order to find "big" methods, the rule NcssCount can be used instead.
     <rule ref="category/java/design.xml/ExcessiveMethodLength" />
+-->
     <rule ref="category/java/design.xml/ExcessiveParameterList" />
     <rule ref="category/java/design.xml/ExcessivePublicCount" />
     <rule ref="category/java/design.xml/FinalFieldCouldBeStatic" />
