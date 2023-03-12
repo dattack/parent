@@ -10,7 +10,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-name: Deploy to the Maven Central Repository
+name: Build & deploy
 on:
   push:
     branches:
