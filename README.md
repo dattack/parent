@@ -1,4 +1,4 @@
-![Build](https://github.com/dattack/parent/actions/workflows/maven-deploy.yml/badge.svg?branch=develop)
+![Build](https://github.com/dattack/parent/actions/workflows/maven-deploy.yml/badge.svg?branch=dev)
 [![license](https://img.shields.io/:license-Apache-blue.svg?style=plastic-square)](LICENSE.md)
 [![Maven Central](https://img.shields.io/maven-central/v/com.dattack/parent.svg?label=Maven%20Central)](https://search.maven.org/artifact/com.dattack/parent)
 

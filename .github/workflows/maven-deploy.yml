@@ -15,7 +15,7 @@ on:
   push:
     branches:
       - master
-      - develop
+      - dev
 jobs:
   publish:
     runs-on: ubuntu-latest 
