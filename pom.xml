@@ -78,7 +78,6 @@
     </distributionManagement>
 
     <properties>
-        <arguments></arguments>
         <bcel.version>6.7.0</bcel.version>
         <checkstyle.header.file>${url.dattack.developer}/java.header</checkstyle.header.file>
         <checkstyle.version>9.3</checkstyle.version>
@@ -89,7 +88,7 @@
         <dattack.clirr.minSeverity>info</dattack.clirr.minSeverity>
         <dattack.compiler.compilerVersion>1.8</dattack.compiler.compilerVersion>
         <dattack.compiler.fork>true</dattack.compiler.fork>
-        <dattack.compiler.javac></dattack.compiler.javac>
+        <dattack.compiler.javac />
         <dattack.compiler.source.version>1.8</dattack.compiler.source.version>
         <dattack.compiler.target.version>1.8</dattack.compiler.target.version>
 
@@ -101,6 +100,8 @@
         <dattack.jacoco.instructionRatio>0.90</dattack.jacoco.instructionRatio>
         <dattack.jacoco.lineRatio>0.90</dattack.jacoco.lineRatio>
         <dattack.jacoco.methodRatio>0.95</dattack.jacoco.methodRatio>
+
+        <dattack.release.arguments />
 
         <implementation.build>r${buildNumber}; ${maven.build.timestamp}</implementation.build>
 
@@ -449,7 +450,7 @@
                         <rulesets>
                             <ruleset>${url.pmd-ruleset.file}</ruleset>
                         </rulesets>
-                        <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+                        <inputEncoding>${project.build.sourceEncoding}</inputEncoding>
                         <minimumTokens>100</minimumTokens>
                         <targetJdk>${dattack.compiler.compilerVersion}</targetJdk>
                     </configuration>
@@ -473,7 +474,7 @@
                     <configuration>
                         <useReleaseProfile>false</useReleaseProfile>
                         <goals>deploy</goals>
-                        <arguments>-Pdattack-release ${arguments}</arguments>
+                        <arguments>-Pdattack-release ${dattack.release.arguments}</arguments>
                         <waitBeforeTagging>10</waitBeforeTagging>
                     </configuration>
                 </plugin>
@@ -630,7 +631,7 @@
                     <artifactId>taglist-maven-plugin</artifactId>
                     <version>${plugin.taglist.version}</version>
                     <configuration>
-                        <encoding>UTF-8</encoding>
+                        <inputEncoding>UTF-8</inputEncoding>
                         <sourceFileLocale>en</sourceFileLocale>
                         <emptyComments>true</emptyComments>
                         <tagListOptions>
