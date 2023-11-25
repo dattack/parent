@@ -159,17 +159,9 @@
         <url.checkstyle.file>${url.dattack.developer}/dattack-checkstyle.xml</url.checkstyle.file>
         <url.dattack.developer>https://raw.githubusercontent.com/dattack/parent/develop/developer/v8</url.dattack.developer>
         <url.pmd-ruleset.file>${url.dattack.developer}/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
-        <wagon-ssh.version>3.5.3</wagon-ssh.version>
     </properties>
 
     <build>
-        <extensions>
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-ssh</artifactId>
-                <version>${wagon-ssh.version}</version>
-            </extension>
-        </extensions>
         <defaultGoal>clean verify apache-rat:check clirr:check checkstyle:check javadoc:javadoc</defaultGoal>
         <resources>
             <resource>
@@ -499,13 +491,6 @@
                             </goals>
                         </execution>
                     </executions>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.apache.maven.wagon</groupId>
-                            <artifactId>wagon-ssh</artifactId>
-                            <version>${wagon-ssh.version}</version>
-                        </dependency>
-                    </dependencies>
                     <configuration>
                         <skipDeploy>true</skipDeploy>
                     </configuration>
