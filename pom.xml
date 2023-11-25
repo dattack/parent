@@ -424,6 +424,7 @@
                         <failOnError>false</failOnError>
                         <notimestamp>true</notimestamp>
                         <linksource>true</linksource>
+                        <additionalOptions>-package</additionalOptions>
                         <archive>
                             <manifest>
                                 <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
