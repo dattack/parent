@@ -89,7 +89,6 @@
         <dattack.clirr.minSeverity>info</dattack.clirr.minSeverity>
         <dattack.compiler.compilerVersion>1.8</dattack.compiler.compilerVersion>
         <dattack.compiler.fork>true</dattack.compiler.fork>
-        <dattack.compiler.javac />
         <dattack.compiler.source.version>1.8</dattack.compiler.source.version>
         <dattack.compiler.target.version>1.8</dattack.compiler.target.version>
 
@@ -101,8 +100,6 @@
         <dattack.jacoco.instructionRatio>0.90</dattack.jacoco.instructionRatio>
         <dattack.jacoco.lineRatio>0.90</dattack.jacoco.lineRatio>
         <dattack.jacoco.methodRatio>0.95</dattack.jacoco.methodRatio>
-
-        <dattack.release.arguments />
 
         <implementation.build>r${buildNumber}; ${maven.build.timestamp}</implementation.build>
 
@@ -134,7 +131,6 @@
         <plugin.jdepend.version>2.0</plugin.jdepend.version>
         <plugin.jxr.version>3.3.1</plugin.jxr.version>
         <plugin.maven-scm-api.version>2.0.1</plugin.maven-scm-api.version>
-        <plugin.maven-scm-provider-gitexe.version>2.0.1</plugin.maven-scm-provider-gitexe.version>
         <plugin.nexus-staging.version>1.6.13</plugin.nexus-staging.version>
         <plugin.plugin.version>3.10.2</plugin.plugin.version>
         <plugin.pmd.version>3.21.2</plugin.pmd.version>
@@ -288,7 +284,6 @@
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <fork>${dattack.compiler.fork}</fork>
                         <compilerVersion>${dattack.compiler.compilerVersion}</compilerVersion>
-                        <executable>${dattack.compiler.javac}</executable>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -455,7 +450,7 @@
                     <configuration>
                         <useReleaseProfile>false</useReleaseProfile>
                         <goals>deploy</goals>
-                        <arguments>-Pdattack-release ${dattack.release.arguments}</arguments>
+                        <arguments>-Pdattack-release</arguments>
                         <waitBeforeTagging>10</waitBeforeTagging>
                     </configuration>
                 </plugin>
