@@ -450,8 +450,6 @@
                         <rulesets>
                             <ruleset>${url.pmd-ruleset.file}</ruleset>
                         </rulesets>
-                        <inputEncoding>${project.build.sourceEncoding}</inputEncoding>
-                        <minimumTokens>100</minimumTokens>
                         <targetJdk>${dattack.compiler.compilerVersion}</targetJdk>
                     </configuration>
                 </plugin>
@@ -631,7 +629,6 @@
                     <artifactId>taglist-maven-plugin</artifactId>
                     <version>${plugin.taglist.version}</version>
                     <configuration>
-                        <inputEncoding>UTF-8</inputEncoding>
                         <sourceFileLocale>en</sourceFileLocale>
                         <emptyComments>true</emptyComments>
                         <tagListOptions>
