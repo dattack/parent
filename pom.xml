@@ -80,6 +80,7 @@
     <properties>
         <bcel.version>6.7.0</bcel.version>
         <checkstyle.header.file>${url.dattack.developer}/java.header</checkstyle.header.file>
+        <!-- Checkstyle version 9.3 is the last version compatible with Java 8 -->
         <checkstyle.version>9.3</checkstyle.version>
         <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
         <dattack.changes.onlyCurrentVersion>false</dattack.changes.onlyCurrentVersion>
@@ -145,6 +146,7 @@
         <plugin.scm.version>2.0.1</plugin.scm.version>
         <plugin.shade.version>3.5.1</plugin.shade.version>
         <plugin.site.version>3.12.1</plugin.site.version>
+        <!-- SortPom version 2.15.0 is the last version compatible with Java 8 -->
         <plugin.sortpom.version>2.15.0</plugin.sortpom.version>
         <plugin.source.version>3.3.0</plugin.source.version>
         <plugin.spotbugs.version>4.8.1.0</plugin.spotbugs.version>
