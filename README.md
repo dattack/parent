@@ -16,7 +16,7 @@ parent in your `pom.xml` file:
 <parent>
     <groupId>com.dattack</groupId>
     <artifactId>parent</artifactId>
-    <version>8-SNAPSHOT</version>
+    <version>8</version>
 </parent>
 ```
 
