@@ -101,6 +101,7 @@
         <dattack.jacoco.lineRatio>0.90</dattack.jacoco.lineRatio>
         <dattack.jacoco.methodRatio>0.95</dattack.jacoco.methodRatio>
 
+        <gpg.executable>gpg2</gpg.executable>
         <implementation.build>r${buildNumber}; ${maven.build.timestamp}</implementation.build>
 
         <maven.compiler.source>1.8</maven.compiler.source>
