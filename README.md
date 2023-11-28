@@ -20,7 +20,7 @@ parent in your `pom.xml` file:
 </parent>
 ```
 
-The source code on the master branch is the current state of development; it is not
+The source code on the main branch is the current state of development; it is not
 recommended for general use. If you prefer to build from source, please use an appropriate
 release tag.
 

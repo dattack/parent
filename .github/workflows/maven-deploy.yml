@@ -14,7 +14,7 @@ name: Build & deploy
 on:
   push:
     branches:
-      - master
+      - main
       - dev
 jobs:
   publish:
