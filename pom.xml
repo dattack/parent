@@ -16,7 +16,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dattack</groupId>
     <artifactId>parent</artifactId>
-    <version>8</version>
+    <version>17.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Dattack Parent</name>
     <description>The Dattack Parent POM provides common settings for all Dattack projects.</description>
@@ -87,10 +87,8 @@
         <dattack.changes.runOnlyAtExecutionRoot>false</dattack.changes.runOnlyAtExecutionRoot>
 
         <dattack.clirr.minSeverity>info</dattack.clirr.minSeverity>
-        <dattack.compiler.compilerVersion>1.8</dattack.compiler.compilerVersion>
+        <dattack.compiler.compilerVersion>17</dattack.compiler.compilerVersion>
         <dattack.compiler.fork>true</dattack.compiler.fork>
-        <dattack.compiler.source.version>1.8</dattack.compiler.source.version>
-        <dattack.compiler.target.version>1.8</dattack.compiler.target.version>
 
         <!-- Default values for the jacoco-maven-plugin reports -->
         <dattack.jacoco.branchRatio>0.85</dattack.jacoco.branchRatio>
@@ -104,8 +102,7 @@
         <gpg.executable>gpg2</gpg.executable>
         <implementation.build>r${buildNumber}; ${maven.build.timestamp}</implementation.build>
 
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.release>17</maven.compiler.release>
         <plugin.appassembler.version>2.1.0</plugin.appassembler.version>
         <plugin.assembly.version>3.6.0</plugin.assembly.version>
         <plugin.build-helper.version>3.5.0</plugin.build-helper.version>
@@ -154,7 +151,7 @@
         <plugin.war.version>3.4.0</plugin.war.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <url.checkstyle.file>${url.dattack.developer}/dattack-checkstyle.xml</url.checkstyle.file>
-        <url.dattack.developer>https://raw.githubusercontent.com/dattack/parent/main/developer/v8</url.dattack.developer>
+        <url.dattack.developer>https://raw.githubusercontent.com/dattack/parent/main/developer/v17.0</url.dattack.developer>
         <url.pmd-ruleset.file>${url.dattack.developer}/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
     </properties>
 
@@ -280,8 +277,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${plugin.compiler.version}</version>
                     <configuration>
-                        <source>${dattack.compiler.source.version}</source>
-                        <target>${dattack.compiler.target.version}</target>
+                        <source>${maven.compiler.release}</source>
+                        <target>${maven.compiler.release}</target>
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <fork>${dattack.compiler.fork}</fork>
                         <compilerVersion>${dattack.compiler.compilerVersion}</compilerVersion>
@@ -323,7 +320,7 @@
                                         <version>3.6.3</version>
                                     </requireMavenVersion>
                                     <requireJavaVersion>
-                                        <version>${dattack.compiler.target.version}</version>
+                                        <version>${maven.compiler.release}</version>
                                     </requireJavaVersion>
                                 </rules>
                                 <fail>true</fail>
@@ -386,8 +383,8 @@
                                 <Implementation-Vendor>${project.organization.name}</Implementation-Vendor>
                                 <Implementation-Vendor-Id>com.dattack</Implementation-Vendor-Id>
                                 <Implementation-Build>${implementation.build}</Implementation-Build>
-                                <X-Compile-Source-JDK>${dattack.compiler.source.version}</X-Compile-Source-JDK>
-                                <X-Compile-Target-JDK>${dattack.compiler.target.version}</X-Compile-Target-JDK>
+                                <X-Compile-Source-JDK>${maven.compiler.release}</X-Compile-Source-JDK>
+                                <X-Compile-Target-JDK>${maven.compiler.release}</X-Compile-Target-JDK>
                             </manifestEntries>
                         </archive>
                     </configuration>
@@ -922,7 +919,7 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <source>${dattack.compiler.source.version}</source>
+                            <source>${maven.compiler.release}</source>
                         </configuration>
                     </plugin>
                     <plugin>
@@ -991,24 +988,6 @@
                     </plugin>
                 </plugins>
             </build>
-        </profile>
-
-        <profile>
-            <id>java-1.8</id>
-            <properties>
-                <dattack.compiler.compilerVersion>1.8</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_8_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_8_HOME}/bin/java</dattack.surefire.java>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>java-1.11</id>
-            <properties>
-                <dattack.compiler.compilerVersion>1.11</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_11_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_11_HOME}/bin/java</dattack.surefire.java>
-            </properties>
         </profile>
 
         <profile>
