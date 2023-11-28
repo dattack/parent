@@ -16,7 +16,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dattack</groupId>
     <artifactId>parent</artifactId>
-    <version>7</version>
+    <version>8</version>
     <packaging>pom</packaging>
     <name>Dattack Parent</name>
     <description>The Dattack Parent POM provides common settings for all Dattack projects.</description>
@@ -58,8 +58,8 @@
         <url>https://github.com/dattack/parent/issues</url>
     </issueManagement>
     <ciManagement>
-        <system>Travis CI</system>
-        <url>https://app.travis-ci.com/github/dattack/parent</url>
+        <system>GitHub</system>
+        <url>https://github.com/dattack/parent/actions</url>
     </ciManagement>
 
     <distributionManagement>
@@ -78,9 +78,9 @@
     </distributionManagement>
 
     <properties>
-        <arguments></arguments>
-        <bcel.version>6.5.0</bcel.version>
+        <bcel.version>6.7.0</bcel.version>
         <checkstyle.header.file>${url.dattack.developer}/java.header</checkstyle.header.file>
+        <!-- Checkstyle version 9.3 is the last version compatible with Java 8 -->
         <checkstyle.version>9.3</checkstyle.version>
         <dattack.changes.maxEntries>100</dattack.changes.maxEntries>
         <dattack.changes.onlyCurrentVersion>false</dattack.changes.onlyCurrentVersion>
@@ -89,10 +89,8 @@
         <dattack.clirr.minSeverity>info</dattack.clirr.minSeverity>
         <dattack.compiler.compilerVersion>1.8</dattack.compiler.compilerVersion>
         <dattack.compiler.fork>true</dattack.compiler.fork>
-        <dattack.compiler.javac></dattack.compiler.javac>
         <dattack.compiler.source.version>1.8</dattack.compiler.source.version>
         <dattack.compiler.target.version>1.8</dattack.compiler.target.version>
-        <dattack.coveralls.timestampFormat>EpochMillis</dattack.coveralls.timestampFormat>
 
         <!-- Default values for the jacoco-maven-plugin reports -->
         <dattack.jacoco.branchRatio>0.85</dattack.jacoco.branchRatio>
@@ -105,70 +103,61 @@
 
         <implementation.build>r${buildNumber}; ${maven.build.timestamp}</implementation.build>
 
-        <javadoc.java.link>http://docs.oracle.com/javase/7/docs/api/</javadoc.java.link>
-        <javadoc.javaee.link>http://docs.oracle.com/javaee/6/api/</javadoc.javaee.link>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <plugin.appassembler.version>2.1.0</plugin.appassembler.version>
-        <plugin.assembly.version>3.3.0</plugin.assembly.version>
-        <plugin.build-helper.version>3.2.0</plugin.build-helper.version>
-        <plugin.buildnumber.version>3.0.0</plugin.buildnumber.version>
+        <plugin.assembly.version>3.6.0</plugin.assembly.version>
+        <plugin.build-helper.version>3.5.0</plugin.build-helper.version>
+        <plugin.buildnumber.version>3.2.0</plugin.buildnumber.version>
         <plugin.changelog.version>2.3</plugin.changelog.version>
         <plugin.changes.version>2.12.1</plugin.changes.version>
-        <plugin.checkstyle.version>3.1.2</plugin.checkstyle.version>
-        <plugin.clean.version>3.1.0</plugin.clean.version>
+        <plugin.checkstyle.version>3.3.1</plugin.checkstyle.version>
+        <plugin.clean.version>3.3.2</plugin.clean.version>
         <plugin.clirr.version>2.8</plugin.clirr.version>
-        <plugin.compiler.version>3.8.1</plugin.compiler.version>
-        <plugin.coveralls.version>4.3.0</plugin.coveralls.version>
-        <plugin.dependency.version>3.2.0</plugin.dependency.version>
-        <plugin.deploy.version>3.0.0-M1</plugin.deploy.version>
-        <plugin.docck.version>1.1</plugin.docck.version>
-        <plugin.ear.version>3.2.0</plugin.ear.version>
-        <plugin.enforcer.version>3.0.0</plugin.enforcer.version>
-        <plugin.failsafe.version>3.0.0-M5</plugin.failsafe.version>
-        <plugin.gpg.version>3.0.1</plugin.gpg.version>
-        <plugin.help.version>3.2.0</plugin.help.version>
-        <plugin.install.version>3.0.0-M1</plugin.install.version>
-        <plugin.invoker.version>3.2.2</plugin.invoker.version>
-        <plugin.jacoco.version>0.8.7</plugin.jacoco.version>
-        <plugin.jar.version>3.2.0</plugin.jar.version>
-        <plugin.javadoc.version>3.3.1</plugin.javadoc.version>
+        <plugin.compiler.version>3.11.0</plugin.compiler.version>
+        <plugin.dependency.version>3.6.1</plugin.dependency.version>
+        <plugin.deploy.version>3.1.1</plugin.deploy.version>
+        <plugin.docck.version>1.2</plugin.docck.version>
+        <plugin.ear.version>3.3.0</plugin.ear.version>
+        <plugin.enforcer.version>3.4.1</plugin.enforcer.version>
+        <plugin.failsafe.version>3.2.2</plugin.failsafe.version>
+        <plugin.gpg.version>3.1.0</plugin.gpg.version>
+        <plugin.help.version>3.4.0</plugin.help.version>
+        <plugin.install.version>3.1.1</plugin.install.version>
+        <plugin.invoker.version>3.6.0</plugin.invoker.version>
+        <plugin.jacoco.version>0.8.11</plugin.jacoco.version>
+        <plugin.jar.version>3.3.0</plugin.jar.version>
+        <plugin.javadoc.version>3.6.2</plugin.javadoc.version>
         <plugin.jdepend.version>2.0</plugin.jdepend.version>
-        <plugin.jxr.version>3.1.1</plugin.jxr.version>
-        <plugin.maven-scm-api.version>1.12.2</plugin.maven-scm-api.version>
-        <plugin.maven-scm-provider-gitexe.version>1.12.2</plugin.maven-scm-provider-gitexe.version>
-        <plugin.nexus-staging.version>1.6.8</plugin.nexus-staging.version>
-        <plugin.plugin.version>3.6.2</plugin.plugin.version>
-        <plugin.pmd.version>3.15.0</plugin.pmd.version>
-        <plugin.project-info-reports.version>3.1.2</plugin.project-info-reports.version>
-        <plugin.rat.version>0.13</plugin.rat.version>
-        <plugin.release.version>3.0.0-M4</plugin.release.version>
-        <plugin.resources.version>3.2.0</plugin.resources.version>
-        <plugin.scm-publish.version>3.1.0</plugin.scm-publish.version>
-        <plugin.scm.version>1.12.0</plugin.scm.version>
-        <plugin.shade.version>3.2.4</plugin.shade.version>
-        <plugin.site.version>3.9.1</plugin.site.version>
-        <plugin.sortpom.version>2.12.0</plugin.sortpom.version>
-        <plugin.source.version>3.2.1</plugin.source.version>
-        <plugin.spotbugs.version>4.1.4</plugin.spotbugs.version>
-        <plugin.surefire-report.version>3.0.0-M5</plugin.surefire-report.version>
-        <plugin.surefire.version>3.0.0-M5</plugin.surefire.version>
-        <plugin.taglist.version>2.4</plugin.taglist.version>
-        <plugin.versions.version>2.8.1</plugin.versions.version>
-        <plugin.war.version>3.3.2</plugin.war.version>
+        <plugin.jxr.version>3.3.1</plugin.jxr.version>
+        <plugin.maven-scm-api.version>2.0.1</plugin.maven-scm-api.version>
+        <plugin.nexus-staging.version>1.6.13</plugin.nexus-staging.version>
+        <plugin.plugin.version>3.10.2</plugin.plugin.version>
+        <plugin.pmd.version>3.21.2</plugin.pmd.version>
+        <plugin.project-info-reports.version>3.5.0</plugin.project-info-reports.version>
+        <plugin.rat.version>0.15</plugin.rat.version>
+        <plugin.release.version>3.0.1</plugin.release.version>
+        <plugin.resources.version>3.3.1</plugin.resources.version>
+        <plugin.scm-publish.version>3.2.1</plugin.scm-publish.version>
+        <plugin.scm.version>2.0.1</plugin.scm.version>
+        <plugin.shade.version>3.5.1</plugin.shade.version>
+        <plugin.site.version>3.12.1</plugin.site.version>
+        <!-- SortPom version 2.15.0 is the last version compatible with Java 8 -->
+        <plugin.sortpom.version>2.15.0</plugin.sortpom.version>
+        <plugin.source.version>3.3.0</plugin.source.version>
+        <plugin.spotbugs.version>4.8.1.0</plugin.spotbugs.version>
+        <plugin.surefire-report.version>3.2.2</plugin.surefire-report.version>
+        <plugin.surefire.version>3.2.2</plugin.surefire.version>
+        <plugin.taglist.version>3.0.0</plugin.taglist.version>
+        <plugin.versions.version>2.16.2</plugin.versions.version>
+        <plugin.war.version>3.4.0</plugin.war.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <url.checkstyle.file>${url.dattack.developer}/dattack-checkstyle.xml</url.checkstyle.file>
-        <url.dattack.developer>https://raw.githubusercontent.com/dattack/parent/develop/developer/v7</url.dattack.developer>
+        <url.dattack.developer>https://raw.githubusercontent.com/dattack/parent/main/developer/v8</url.dattack.developer>
         <url.pmd-ruleset.file>${url.dattack.developer}/dattack-pmd-ruleset.xml</url.pmd-ruleset.file>
-        <wagon-ssh.version>3.5.1</wagon-ssh.version>
     </properties>
 
     <build>
-        <extensions>
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-ssh</artifactId>
-                <version>${wagon-ssh.version}</version>
-            </extension>
-        </extensions>
         <defaultGoal>clean verify apache-rat:check clirr:check checkstyle:check javadoc:javadoc</defaultGoal>
         <resources>
             <resource>
@@ -247,18 +236,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-changelog-plugin</artifactId>
                     <version>${plugin.changelog.version}</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.apache.maven.scm</groupId>
-                            <artifactId>maven-scm-api</artifactId>
-                            <version>${plugin.maven-scm-api.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.apache.maven.scm</groupId>
-                            <artifactId>maven-scm-provider-gitexe</artifactId>
-                            <version>${plugin.maven-scm-provider-gitexe.version}</version>
-                        </dependency>
-                    </dependencies>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -307,7 +284,6 @@
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <fork>${dattack.compiler.fork}</fork>
                         <compilerVersion>${dattack.compiler.compilerVersion}</compilerVersion>
-                        <executable>${dattack.compiler.javac}</executable>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -343,7 +319,7 @@
                             <configuration>
                                 <rules>
                                     <requireMavenVersion>
-                                        <version>3.3.9</version>
+                                        <version>3.6.3</version>
                                     </requireMavenVersion>
                                     <requireJavaVersion>
                                         <version>${dattack.compiler.target.version}</version>
@@ -425,10 +401,6 @@
                         <failOnError>false</failOnError>
                         <notimestamp>true</notimestamp>
                         <linksource>true</linksource>
-                        <links>
-                            <link>${javadoc.java.link}</link>
-                            <link>${javadoc.javaee.link}</link>
-                        </links>
                         <archive>
                             <manifest>
                                 <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
@@ -455,9 +427,6 @@
                         <rulesets>
                             <ruleset>${url.pmd-ruleset.file}</ruleset>
                         </rulesets>
-                        <linkXref>true</linkXref>
-                        <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
-                        <minimumTokens>100</minimumTokens>
                         <targetJdk>${dattack.compiler.compilerVersion}</targetJdk>
                     </configuration>
                 </plugin>
@@ -480,7 +449,7 @@
                     <configuration>
                         <useReleaseProfile>false</useReleaseProfile>
                         <goals>deploy</goals>
-                        <arguments>-Pdattack-release ${arguments}</arguments>
+                        <arguments>-Pdattack-release</arguments>
                         <waitBeforeTagging>10</waitBeforeTagging>
                     </configuration>
                 </plugin>
@@ -498,13 +467,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-scm-publish-plugin</artifactId>
                     <version>${plugin.scm-publish.version}</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.apache.maven.scm</groupId>
-                            <artifactId>maven-scm-provider-gitexe</artifactId>
-                            <version>${plugin.maven-scm-provider-gitexe.version}</version>
-                        </dependency>
-                    </dependencies>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -523,13 +485,6 @@
                             </goals>
                         </execution>
                     </executions>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.apache.maven.wagon</groupId>
-                            <artifactId>wagon-ssh</artifactId>
-                            <version>${wagon-ssh.version}</version>
-                        </dependency>
-                    </dependencies>
                     <configuration>
                         <skipDeploy>true</skipDeploy>
                     </configuration>
@@ -548,6 +503,7 @@
                         </execution>
                     </executions>
                     <configuration>
+                        <attach>false</attach>
                         <archive>
                             <manifest>
                                 <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
@@ -636,7 +592,6 @@
                     <artifactId>taglist-maven-plugin</artifactId>
                     <version>${plugin.taglist.version}</version>
                     <configuration>
-                        <encoding>UTF-8</encoding>
                         <sourceFileLocale>en</sourceFileLocale>
                         <emptyComments>true</emptyComments>
                         <tagListOptions>
@@ -749,6 +704,10 @@
                 <artifactId>sortpom-maven-plugin</artifactId>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.rat</groupId>
                 <artifactId>apache-rat-plugin</artifactId>
             </plugin>
@@ -782,7 +741,6 @@
                     <reportSet>
                         <reports>
                             <report>changes-report</report>
-                            <report>github-report</report>
                         </reports>
                     </reportSet>
                 </reportSets>
@@ -1026,26 +984,8 @@
             <id>java-1.8</id>
             <properties>
                 <dattack.compiler.compilerVersion>1.8</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_1_8_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_1_8_HOME}/bin/java</dattack.surefire.java>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>java-1.9</id>
-            <properties>
-                <dattack.compiler.compilerVersion>1.9</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_1_9_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_1_9_HOME}/bin/java</dattack.surefire.java>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>java-1.10</id>
-            <properties>
-                <dattack.compiler.compilerVersion>1.10</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_1_10_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_1_10_HOME}/bin/java</dattack.surefire.java>
+                <dattack.compiler.javac>${JAVA_8_HOME}/bin/javac</dattack.compiler.javac>
+                <dattack.surefire.java>${JAVA_8_HOME}/bin/java</dattack.surefire.java>
             </properties>
         </profile>
 
@@ -1053,17 +993,26 @@
             <id>java-1.11</id>
             <properties>
                 <dattack.compiler.compilerVersion>1.11</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_1_11_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_1_11_HOME}/bin/java</dattack.surefire.java>
+                <dattack.compiler.javac>${JAVA_11_HOME}/bin/javac</dattack.compiler.javac>
+                <dattack.surefire.java>${JAVA_11_HOME}/bin/java</dattack.surefire.java>
             </properties>
         </profile>
 
         <profile>
-            <id>java-1.12</id>
+            <id>java-17</id>
             <properties>
-                <dattack.compiler.compilerVersion>1.12</dattack.compiler.compilerVersion>
-                <dattack.compiler.javac>${JAVA_1_12_HOME}/bin/javac</dattack.compiler.javac>
-                <dattack.surefire.java>${JAVA_1_12_HOME}/bin/java</dattack.surefire.java>
+                <dattack.compiler.compilerVersion>17</dattack.compiler.compilerVersion>
+                <dattack.compiler.javac>${JAVA_17_HOME}/bin/javac</dattack.compiler.javac>
+                <dattack.surefire.java>${JAVA_17_HOME}/bin/java</dattack.surefire.java>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>java-19</id>
+            <properties>
+                <dattack.compiler.compilerVersion>19</dattack.compiler.compilerVersion>
+                <dattack.compiler.javac>${JAVA_19_HOME}/bin/javac</dattack.compiler.javac>
+                <dattack.surefire.java>${JAVA_19_HOME}/bin/java</dattack.surefire.java>
             </properties>
         </profile>
 
@@ -1112,26 +1061,6 @@
             </properties>
         </profile>
 
-        <profile>
-            <id>travis-jacoco</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.eluder.coveralls</groupId>
-                        <artifactId>coveralls-maven-plugin</artifactId>
-                        <version>${plugin.coveralls.version}</version>
-                        <configuration>
-                            <timestampFormat>${dattack.coveralls.timestampFormat}</timestampFormat>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.jacoco</groupId>
-                        <artifactId>jacoco-maven-plugin</artifactId>
-                        <version>${plugin.jacoco.version}</version>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
     </profiles>
 
 </project>

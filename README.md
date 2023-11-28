@@ -1,25 +1,26 @@
-
-# Parent POM
-
-[![Travis Badge](https://api.travis-ci.com/dattack/parent.svg?branch=develop)](https://travis-ci.com/dattack/parent/builds)
+![Build](https://github.com/dattack/parent/actions/workflows/maven-deploy.yml/badge.svg?branch=dev)
 [![license](https://img.shields.io/:license-Apache-blue.svg?style=plastic-square)](LICENSE.md)
 [![Maven Central](https://img.shields.io/maven-central/v/com.dattack/parent.svg?label=Maven%20Central)](https://search.maven.org/artifact/com.dattack/parent)
 
-The _parent-POM_ provides common settings for all Dattack's projects.
+# Parent POM
+
+The _parent_ project provides common Maven settings used by Dattack projects. This mainly involves the versioning and
+configuration of Maven plugins as well as the structure of the projects and the infrastructure used.
 
 ## Usage
 
-_parent-POM_ is hosted into The Central Repository, so all you need to do to use it in a maven project is set the parent in your `pom.xml` file:
+This project is hosted into The Central Repository, so all you need to do to use it in a maven project is set the 
+parent in your `pom.xml` file:
 
 ```xml
 <parent>
     <groupId>com.dattack</groupId>
     <artifactId>parent</artifactId>
-    <version>5</version>
+    <version>8</version>
 </parent>
 ```
 
-The source code on the master branch is the current state of development; it is not
+The source code on the main branch is the current state of development; it is not
 recommended for general use. If you prefer to build from source, please use an appropriate
 release tag.
 
