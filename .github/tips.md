@@ -41,10 +41,10 @@ create a GPG key and share it with the key servers:
     gpg --keyserver pgp.mit.edu --send-keys <key-id>
     ```
 
-4. Export the public key
+4. Export the key
 
     ```bash
-    gpg --armor --export <key-id> > gpg_key.asc
+    gpg --armor --export-secret-keys <key-id> > gpg_key.asc
     ```
 
 See also [https://central.sonatype.org/publish/requirements/gpg/](https://central.sonatype.org/publish/requirements/gpg/)
